@@ -1,0 +1,6 @@
+@APZMS_HostAddress = http://localhost:5152
+
+GET {{APZMS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
