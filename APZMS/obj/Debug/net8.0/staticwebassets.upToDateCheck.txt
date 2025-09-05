@@ -1,2 +1,3 @@
 wwwroot\Uploads\Activities\2102ae54-be1d-44b2-a3ec-f7c7d1c5d652.jpg
 wwwroot\Uploads\Activities\964f7552-512e-4130-99e1-a3270b5dd430.jpg
+wwwroot\Uploads\Activities\9e42b64d-dfdc-4e1a-a65b-2666d7e5090d.jpg

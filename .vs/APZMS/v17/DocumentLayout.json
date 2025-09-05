@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\APZMS\\",
+  "WorkspaceRootPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\apzms\\apzms\\services\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\apzms\\apzms\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\utilities\\dynamicpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\utilities\\dynamicpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\apzms\\apzms\\utilities\\agegrouphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\utilities\\agegrouphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\apzms\\apzms\\services\\iactivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\iactivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,34 +30,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ActivityService.cs",
-              "DocumentMoniker": "E:\\APZMS\\APZMS\\Services\\ActivityService.cs",
-              "RelativeDocumentMoniker": "APZMS\\Services\\ActivityService.cs",
-              "ToolTip": "E:\\APZMS\\APZMS\\Services\\ActivityService.cs",
-              "RelativeToolTip": "APZMS\\Services\\ActivityService.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "APZMS\\Services\\BookingService.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\BookingService.cs",
+              "RelativeToolTip": "APZMS\\Services\\BookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:31:11.054Z",
+              "WhenOpened": "2025-09-05T12:36:00.316Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ActivitiesController.cs",
-              "DocumentMoniker": "E:\\APZMS\\APZMS\\Controllers\\ActivitiesController.cs",
-              "RelativeDocumentMoniker": "APZMS\\Controllers\\ActivitiesController.cs",
-              "ToolTip": "E:\\APZMS\\APZMS\\Controllers\\ActivitiesController.cs",
-              "RelativeToolTip": "APZMS\\Controllers\\ActivitiesController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBwAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "APZMS\\Controllers\\BookingController.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "APZMS\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T12:35:20.089Z",
+              "WhenOpened": "2025-09-05T12:28:37.372Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "APZMS\\Services\\UserService.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\UserService.cs",
+              "RelativeToolTip": "APZMS\\Services\\UserService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T13:13:03.897Z",
               "EditorCaption": ""
             },
             {
@@ -63,27 +80,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IActivityService.cs",
-              "DocumentMoniker": "E:\\APZMS\\APZMS\\Services\\IActivityService.cs",
-              "RelativeDocumentMoniker": "APZMS\\Services\\IActivityService.cs",
-              "ToolTip": "E:\\APZMS\\APZMS\\Services\\IActivityService.cs",
-              "RelativeToolTip": "APZMS\\Services\\IActivityService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "DynamicPricing.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Utilities\\DynamicPricing.cs",
+              "RelativeDocumentMoniker": "APZMS\\Utilities\\DynamicPricing.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Utilities\\DynamicPricing.cs",
+              "RelativeToolTip": "APZMS\\Utilities\\DynamicPricing.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAhwBYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T12:04:07.58Z",
+              "WhenOpened": "2025-09-05T12:48:08.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AgeGroupHelper.cs",
-              "DocumentMoniker": "E:\\APZMS\\APZMS\\Utilities\\AgeGroupHelper.cs",
-              "RelativeDocumentMoniker": "APZMS\\Utilities\\AgeGroupHelper.cs",
-              "ToolTip": "E:\\APZMS\\APZMS\\Utilities\\AgeGroupHelper.cs",
-              "RelativeToolTip": "APZMS\\Utilities\\AgeGroupHelper.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ActivitiesController.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\ActivitiesController.cs",
+              "RelativeDocumentMoniker": "APZMS\\Controllers\\ActivitiesController.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\ActivitiesController.cs",
+              "RelativeToolTip": "APZMS\\Controllers\\ActivitiesController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAA1wBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T11:48:40.91Z",
+              "WhenOpened": "2025-09-05T12:28:05.847Z",
               "EditorCaption": ""
             }
           ]

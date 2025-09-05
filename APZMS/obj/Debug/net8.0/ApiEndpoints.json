@@ -102,5 +102,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "BookSlots",
+    "RelativePath": "api/v1/bookings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APZMS.DTOs.BookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -1,10 +1,11 @@
 using APZMS.Data;
 using APZMS.Models;
-using Microsoft.Extensions.FileProviders;
 using APZMS.Services;
+using APZMS.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -19,6 +20,8 @@ builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<IActivityService, ActivityService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<DynamicPricing>();
 
 builder.Services.AddAuthentication(options =>
 {

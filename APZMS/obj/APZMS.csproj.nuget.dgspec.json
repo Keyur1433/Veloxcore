@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\APZMS\\APZMS\\APZMS.csproj": {}
+    "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.csproj": {}
   },
   "projects": {
-    "E:\\APZMS\\APZMS\\APZMS.csproj": {
+    "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\APZMS\\APZMS\\APZMS.csproj",
+        "projectUniqueName": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.csproj",
         "projectName": "APZMS",
-        "projectPath": "E:\\APZMS\\APZMS\\APZMS.csproj",
+        "projectPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.csproj",
         "packagesPath": "C:\\Users\\KeyurAjudiya\\.nuget\\packages\\",
-        "outputPath": "E:\\APZMS\\APZMS\\obj\\",
+        "outputPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

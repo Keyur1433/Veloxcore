@@ -12,7 +12,7 @@ namespace APZMS.Validators
             _extension = extension;
             _maxFileSize = maxFileSize;
         }
-
+                    
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if(value is IFormFile file)

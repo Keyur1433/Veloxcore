@@ -3,8 +3,6 @@ using APZMS.DTOs;
 using APZMS.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace APZMS.Services
 {
@@ -33,6 +31,7 @@ namespace APZMS.Services
                 Name = dto.Name,
                 Phone = dto.Phone,
                 Role = "customer",
+                BirthDate = dto.BirthDate,
             };
  
             user.PasswordHash = _passwordHasher.HashPassword(user, dto.Password!);

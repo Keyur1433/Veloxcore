@@ -9,5 +9,6 @@ namespace APZMS.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<ActivityGames> Activities { get; set; } 
+        public DbSet<Booking> Bookings { get; set; }
     }
 }

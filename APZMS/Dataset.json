@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Keyur Patel",
+    "email": "keyur.patel@example.com",
+    "phone": "3194282282",
+    "password": "string",
+    "birthDate": "2020-03-10T11:32:32.570Z",
+    "timeSlot": "10:00-14:00"
+  },
+  {
+    "name": "Ananya Sharma",
+    "email": "ananya.sharma@example.com",
+    "phone": "3194282283",
+    "password": "string",
+    "birthDate": "2018-07-15T11:32:32.570Z",
+    "timeSlot": "10:00-14:00"
+  },
+  {
+    "name": "Ravi Kumar",
+    "email": "ravi.kumar@example.com",
+    "phone": "3194282284",
+    "password": "string",
+    "birthDate": "2015-08-25T11:32:32.570Z",
+    "timeSlot": "14:00-18:00"
+  },
+  {
+    "name": "Sara Iqbal",
+    "email": "sara.iqbal@example.com",
+    "phone": "3194282285",
+    "password": "string",
+    "birthDate": "2010-12-20T11:32:32.570Z",
+    "timeSlot": "14:00-18:00"
+  },
+  {
+    "name": "Neha Verma",
+    "email": "neha.verma@example.com",
+    "phone": "3194282286",
+    "password": "string",
+    "birthDate": "2005-03-12T11:32:32.570Z",
+    "timeSlot": "09:00-10:00"
+  },
+  {
+    "name": "Amit Patel",
+    "email": "amit.patel@example.com",
+    "phone": "3194282287",
+    "password": "string",
+    "birthDate": "2004-05-20T11:32:32.570Z",
+    "timeSlot": "09:00-10:00"
+  },
+  {
+    "name": "Maya Gupta",
+    "email": "maya.gupta@example.com",
+    "phone": "3194282288",
+    "password": "string",
+    "birthDate": "1990-07-10T11:32:32.570Z",
+    "timeSlot": "14:00-18:00"
+  },
+  {
+    "name": "Vikram Singh",
+    "email": "vikram.singh@example.com",
+    "phone": "3194282289",
+    "password": "string",
+    "birthDate": "1992-04-18T11:32:32.570Z",
+    "timeSlot": "18:00-22:00"
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "3194282290",
+    "password": "string",
+    "birthDate": "1995-10-25T11:32:32.570Z",
+    "timeSlot": "18:00-22:00"
+  },
+  {
+    "name": "Priya Joshi",
+    "email": "priya.joshi@example.com",
+    "phone": "3194282291",
+    "password": "string",
+    "birthDate": "2000-06-05T11:32:32.570Z",
+    "timeSlot": "18:00-22:00"
+  },
+  {
+    "name": "Kabir Khan",
+    "email": "kabir.khan@example.com",
+    "phone": "3194282292",
+    "password": "string",
+    "birthDate": "2016-09-10T11:32:32.570Z",
+    "timeSlot": "10:00-14:00"
+  },
+  {
+    "name": "Ishita Rai",
+    "email": "ishita.rai@example.com",
+    "phone": "3194282293",
+    "password": "string",
+    "birthDate": "2009-04-02T11:32:32.570Z",
+    "timeSlot": "14:00-18:00"
+  },
+  {
+    "name": "Aarav Mehta",
+    "email": "aarav.mehta@example.com",
+    "phone": "3194282294",
+    "password": "string",
+    "birthDate": "2004-02-25T11:32:32.570Z",
+    "timeSlot": "14:00-18:00"
+  },
+  {
+    "name": "Simran Kapoor",
+    "email": "simran.kapoor@example.com",
+    "phone": "3194282295",
+    "password": "string",
+    "birthDate": "2008-11-22T11:32:32.570Z",
+    "timeSlot": "18:00-22:00"    
+  },
+  {
+    "name": "Riya Bansal",
+    "email": "riya.bansal@example.com",
+    "phone": "3194282296",
+    "password": "string",
+    "birthDate": "2006-12-15T11:32:32.570Z",
+    "timeSlot": "18:00-22:00"
+  }
+]
