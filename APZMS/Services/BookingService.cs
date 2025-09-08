@@ -1,7 +1,9 @@
 ﻿using APZMS.Data;
 using APZMS.DTOs;
 using APZMS.Models;
+using APZMS.Models.Views;
 using APZMS.Utilities;
+using Microsoft.EntityFrameworkCore;
 
 namespace APZMS.Services
 {
@@ -53,6 +55,34 @@ namespace APZMS.Services
                 TimeSlotType = TimeSlotTypeGenerator.GetTimeSlotType(dto.TimeSlot),
                 Message = "Booking successful."
             };
+        }
+
+        public async Task<IEnumerable<BookingFilteredItemResponseDto>> GetFilteredBookings(string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
+        {
+            if (bookingDateFrom != null)
+            {
+                if (bookingDateTo == null )
+                    throw new ArgumentException("From date and To date both are must to provide");
+            }
+
+            var rows = await _context.Set<BookingListItem>()
+                .FromSqlInterpolated($"EXEC sp_GetBookings @CustomerName={customerName}, @ActivityName={activityName}, @SafetyLevel={safetyLevel}, @BookingDateFrom={bookingDateFrom}, @BookingDateTo={bookingDateTo}")
+                .ToListAsync();
+
+            return rows.Select(r => new BookingFilteredItemResponseDto
+            {
+                Id = r.BookingId,
+                ActivityId = r.ActivityId,
+                CustomerId = r.CustomerId,
+                CustomerName = r.CustomerName,
+                ActivityName = r.ActivityName,
+                Price = r.Price,
+                FinalPrice = _dynamicPricing.GetFinalPrice(r.CustomerBirthDate, r.TimeSlot, r.Price),
+                BookingDate = r.BookingDate,
+                TimeSlot = r.TimeSlot,
+                Participants = r.Participants,
+                TimeSlotType = TimeSlotTypeGenerator.GetTimeSlotType(r.TimeSlot)
+            });
         }
     }
 }

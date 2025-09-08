@@ -1,5 +1,6 @@
 ﻿using APZMS.DTOs;
 using APZMS.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APZMS.Controllers
@@ -33,6 +34,26 @@ namespace APZMS.Controllers
             }
             catch (Exception ex) 
             { 
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("bookings/filter")]
+        [Authorize(Roles = "staff, admin")]
+        public async Task<IActionResult> GetFilteredBookings([FromQuery] string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
+        {
+            try
+            {
+                var filteredBookings = await _bookingService.GetFilteredBookings(customerName, activityName, safetyLevel, bookingDateFrom, bookingDateTo);
+
+                return Ok(new { filteredBookings });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
                 return BadRequest(ex.Message);
             }
         }

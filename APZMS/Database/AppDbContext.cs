@@ -1,4 +1,5 @@
 ﻿using APZMS.Models;
+using APZMS.Models.Views;
 using Microsoft.EntityFrameworkCore;
 
 namespace APZMS.Data
@@ -10,5 +11,6 @@ namespace APZMS.Data
         public DbSet<User> Users { get; set; }
         public DbSet<ActivityGames> Activities { get; set; } 
         public DbSet<Booking> Bookings { get; set; }
+        public DbSet<BookingListItem> BookingListItems { get; set; }
     }
 }

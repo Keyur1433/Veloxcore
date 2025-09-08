@@ -1,0 +1,120 @@
+﻿Name:Racing
+Description:Racing the car
+Price:200
+Capacity:3
+MinAge:2
+MaxAge:4
+SafetyLevel:low
+
+Name:Laser Tag
+Description:Fun laser tag battles
+Price:500
+Capacity:20
+MinAge:8
+MaxAge:99
+SafetyLevel:medium
+
+Name:Mini Golf
+Description:Play mini golf with friends
+Price:300
+Capacity:10
+MinAge:5
+MaxAge:99
+SafetyLevel:low
+
+Name:Rock Climbing
+Description:Indoor rock climbing challenge
+Price:600
+Capacity:8
+MinAge:10
+MaxAge:60
+SafetyLevel:high
+
+Name:Trampoline Jump
+Description:Jump and bounce on trampolines
+Price:400
+Capacity:15
+MinAge:4
+MaxAge:50
+SafetyLevel:medium
+
+Name:Bowling
+Description:Ten-pin bowling experience
+Price:450
+Capacity:6
+MinAge:6
+MaxAge:99
+SafetyLevel:low
+
+Name:VR Adventure
+Description:Virtual reality adventure gaming
+Price:700
+Capacity:5
+MinAge:12
+MaxAge:99
+SafetyLevel:medium
+
+Name:Paintball
+Description:Outdoor paintball battle
+Price:900
+Capacity:12
+MinAge:14
+MaxAge:60
+SafetyLevel:high
+
+Name:Obstacle Course
+Description:Fun obstacle course challenge
+Price:350
+Capacity:25
+MinAge:6
+MaxAge:40
+SafetyLevel:medium
+
+Name:Swimming Pool
+Description:Safe kids and family pool
+Price:250
+Capacity:30
+MinAge:2
+MaxAge:99
+SafetyLevel:low
+
+Name:Rope Course
+Description:High rope climbing adventure
+Price:800
+Capacity:10
+MinAge:12
+MaxAge:50
+SafetyLevel:high
+
+Name:Go Kart
+Description:Go kart racing track
+Price:100
+Capacity:8
+MinAge:16
+MaxAge:60
+SafetyLevel:high
+
+Name:Dance Floor
+Description:Music and dance fun
+Price:200
+Capacity:50
+MinAge:5
+MaxAge:99
+SafetyLevel:low
+
+Name:Zip Line
+Description:Outdoor zip line adventure
+Price:750
+Capacity:6
+MinAge:12
+MaxAge:60
+SafetyLevel:high
+
+Name:Arcade Games
+Description:Multiple arcade game machines
+Price:150
+Capacity:20
+MinAge:3
+MaxAge:99
+SafetyLevel:low
+

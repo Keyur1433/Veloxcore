@@ -118,5 +118,41 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "GetFilteredBookings",
+    "RelativePath": "api/v1/bookings/filter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "activityName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "safetyLevel",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "bookingDateFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "bookingDateTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
