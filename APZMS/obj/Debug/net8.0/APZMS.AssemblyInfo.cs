@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APZMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bdaca4a49f6cd93c9572f523d56ddc62fcda211")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0630e9cc1a56eba70c5f96c5e3298f1ce0432faa")]
 [assembly: System.Reflection.AssemblyProductAttribute("APZMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APZMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

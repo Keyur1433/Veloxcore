@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\services\\ireport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\ireport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\services\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\services\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\dtos\\customerhistoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\dtos\\customerhistoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\utilities\\agegrouphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\utilities\\agegrouphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\utilities\\dynamicpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\utilities\\dynamicpricing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,63 +40,46 @@
               "RelativeDocumentMoniker": "APZMS\\Controllers\\ReportController.cs",
               "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\ReportController.cs",
               "RelativeToolTip": "APZMS\\Controllers\\ReportController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBUAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwDAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T13:55:41.133Z",
+              "WhenOpened": "2025-09-09T08:15:11.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AgeGroupHelper.cs",
-              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Utilities\\AgeGroupHelper.cs",
-              "RelativeDocumentMoniker": "APZMS\\Utilities\\AgeGroupHelper.cs",
-              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Utilities\\AgeGroupHelper.cs",
-              "RelativeToolTip": "APZMS\\Utilities\\AgeGroupHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CustomerHistoryResponse.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\DTOs\\CustomerHistoryResponse.cs",
+              "RelativeDocumentMoniker": "APZMS\\DTOs\\CustomerHistoryResponse.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\DTOs\\CustomerHistoryResponse.cs",
+              "RelativeToolTip": "APZMS\\DTOs\\CustomerHistoryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T13:33:54.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DynamicPricing.cs",
-              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Utilities\\DynamicPricing.cs",
-              "RelativeDocumentMoniker": "APZMS\\Utilities\\DynamicPricing.cs",
-              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Utilities\\DynamicPricing.cs",
-              "RelativeToolTip": "APZMS\\Utilities\\DynamicPricing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T13:00:13.826Z",
+              "WhenOpened": "2025-09-09T05:37:34.785Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IReport.cs",
-              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\IReport.cs",
-              "RelativeDocumentMoniker": "APZMS\\Services\\IReport.cs",
-              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\IReport.cs",
-              "RelativeToolTip": "APZMS\\Services\\IReport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Title": "IReportService.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\IReportService.cs",
+              "RelativeDocumentMoniker": "APZMS\\Services\\IReportService.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\IReportService.cs",
+              "RelativeToolTip": "APZMS\\Services\\IReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-08T12:25:28.672Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Report.cs",
-              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\Report.cs",
-              "RelativeDocumentMoniker": "APZMS\\Services\\Report.cs",
-              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\Report.cs",
-              "RelativeToolTip": "APZMS\\Services\\Report.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABIAAACfAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "APZMS\\Services\\ReportService.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Services\\ReportService.cs",
+              "RelativeToolTip": "APZMS\\Services\\ReportService.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAJ0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-08T12:10:55.994Z",
               "EditorCaption": ""
