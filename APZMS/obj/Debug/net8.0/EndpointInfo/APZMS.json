@@ -156,8 +156,130 @@
         }
       }
     },
+    "/api/v1/bookings/{bookingId}": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "bookingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/bookings/{id}": {
+      "put": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingPatchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingPatchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingPatchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/bookings/filter": {
-      "post": {
+      "get": {
         "tags": [
           "Booking"
         ],
@@ -383,6 +505,38 @@
           "participants": {
             "maximum": 2147483647,
             "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookingPatchDto": {
+        "type": "object",
+        "properties": {
+          "participants": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookingUpdateDto": {
+        "type": "object",
+        "properties": {
+          "customerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "activityId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "participants": {
             "type": "integer",
             "format": "int32"
           }

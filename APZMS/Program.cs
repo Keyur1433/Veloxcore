@@ -2,6 +2,7 @@ using APZMS.Data;
 using APZMS.Models;
 using APZMS.Services;
 using APZMS.Utilities;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -55,6 +56,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var mapperConfig = new MapperConfiguration(cfg =>
+{
+    cfg.AddMaps(typeof(Program).Assembly);
+});
+IMapper mapper = mapperConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 var app = builder.Build();
 

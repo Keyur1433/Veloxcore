@@ -281,3 +281,4 @@ E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\obj\Debug
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\obj\Debug\net8.0\APZMS.pdb
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\obj\Debug\net8.0\APZMS.genruntimeconfig.cache
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\obj\Debug\net8.0\ref\APZMS.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\bin\Debug\net8.0\AutoMapper.dll

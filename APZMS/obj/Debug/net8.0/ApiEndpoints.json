@@ -121,9 +121,83 @@
   },
   {
     "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "GetBookings",
+    "RelativePath": "api/v1/bookings/{bookingId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "UpdateBooking",
+    "RelativePath": "api/v1/bookings/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "APZMS.DTOs.BookingUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "PatchCustomer",
+    "RelativePath": "api/v1/bookings/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "APZMS.DTOs.BookingPatchDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "CancleBooking",
+    "RelativePath": "api/v1/bookings/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
     "Method": "GetFilteredBookings",
     "RelativePath": "api/v1/bookings/filter",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [

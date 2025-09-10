@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace APZMS.Controllers
 {
     [ApiController]
-    [Route("api/v1")]
+    [Route("api/v1/bookings")]
     public class BookingController : ControllerBase
     {
         private readonly IBookingService _bookingService;
@@ -16,7 +16,16 @@ namespace APZMS.Controllers
             _bookingService = bookingService;
         }
 
-        [HttpPost("bookings")]
+        // ToDo:
+        // (Follow rest api conventions)
+        // Get all bookings with filters and pagination
+        // Get by id
+        // Post
+        // Put
+        // Patch
+        // Delete
+
+        [HttpPost]
         public async Task<IActionResult> BookSlots(BookingDto dto)
         {
             try
@@ -32,13 +41,70 @@ namespace APZMS.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
                 return BadRequest(ex.Message);
             }
         }
 
-        [HttpPost("bookings/filter")]
+        [HttpGet("{bookingId}")]
+        [Authorize(Roles = "staff, admin")]
+        public async Task<IActionResult> GetBookings(string bookingId)
+        {
+            try
+            {
+                var result = await _bookingService.GetBookingsAsync(bookingId);
+                return StatusCode(200, new { result });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "customer")]
+        public async Task<IActionResult> UpdateBooking(string id, BookingUpdateDto dto)
+        {
+            try
+            {
+                var result = await _bookingService.UpdateBookingAsync(id, dto);
+
+                return StatusCode(200, new { result });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPatch("{id}")]
+        [Authorize(Roles = "customer")]
+        public async Task<IActionResult> PatchCustomer(string id, BookingPatchDto dto)
+        {
+            var result = await _bookingService.PatchBookingAsync(id, dto);
+
+            return StatusCode(200, new { result });
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "customer")]
+        public async Task<IActionResult> CancleBooking(string id)
+        {
+            var result = await _bookingService.CancleBookingAsync(id);
+
+            return StatusCode(200, new { result });
+        }
+
+        [HttpGet("filter")]
         [Authorize(Roles = "staff, admin")]
         public async Task<IActionResult> GetFilteredBookings([FromQuery] string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
         {

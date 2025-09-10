@@ -155,17 +155,74 @@ namespace APZMS.Services
 
                 return result;
             }
-
-            return new Root
+            else
             {
-                CustomerId = 0,
-                CustomerName = string.Empty,
-                AgeGroup = string.Empty,
-                TotalBookings = 0,
-                TotalSpent = 0,
-                FavoriteActivity = string.Empty,
-                BookingHistory = new List<CustomerHistoryResponse>()
-            };
+                var query = from b in bookings
+                            join c in customers on b.CustomerId equals c.Id
+                            join a in activities on b.ActivityId equals a.Id
+                            select new
+                            {
+                                bookingId = b.BookingId,
+                                bookingDate = b.BookingDate,
+                                participants = b.Participants,
+                                timeSlot = b.TimeSlot,
+                                customerId = c.Id,
+                                customerName = c.Name,
+                                customerDOB = c.BirthDate,
+                                activityId = a.Id,
+                                activityName = a.Name,
+                                slotPrice = a.Price,
+                            };
+
+                var bookingRows = await query.ToListAsync();
+
+                var rowsWithPrice = bookingRows.Select(b => new
+                {
+                    b.bookingId,
+                    b.activityId,
+                    b.activityName,
+                    b.bookingDate,
+                    b.timeSlot,
+                    b.participants,
+                    FinalPrice = _dynamicPricing.GetFinalPrice(b.customerDOB, b.timeSlot, b.slotPrice),
+                    b.customerId,
+                    b.customerName,
+                    b.customerDOB
+                }).ToList();
+
+                var totalBookings = rowsWithPrice.Count;
+                var totalSpent = rowsWithPrice.Sum(r => r.FinalPrice);
+
+                var favouriteActivityGroup = rowsWithPrice
+                    .GroupBy(r => new { r.activityId, r.activityName })
+                    .OrderByDescending(g => g.Count())
+                    .FirstOrDefault();
+
+                var favoriteActivityName = favouriteActivityGroup?.Key.activityName ?? string.Empty;
+
+                var bookingHistory = rowsWithPrice.Select(r => new CustomerHistoryResponse
+                {
+                    BookingId = r.bookingId,
+                    ActivityName = r.activityName,
+                    BookingDate = r.bookingDate,
+                    TimeSlot = r.timeSlot,
+                    Participants = r.participants,
+                    FinalPrice = r.FinalPrice,
+                }).ToList();
+
+                var result = new Root
+                {
+                    CustomerId = rowsWithPrice.FirstOrDefault()?.customerId ?? idFromToken,
+                    CustomerName = rowsWithPrice.FirstOrDefault()?.customerName ?? string.Empty,
+                    AgeGroup = AgeGroupHelper.GetAgeGroup(rowsWithPrice.FirstOrDefault()!.customerDOB),
+                    TotalBookings = totalBookings,
+                    TotalSpent = totalSpent,
+                    FavoriteActivity = favoriteActivityName,
+                    BookingHistory = bookingHistory
+                };
+
+                return result;
+            }
         }
     }
 }
