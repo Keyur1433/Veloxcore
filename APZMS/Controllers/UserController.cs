@@ -1,6 +1,6 @@
-﻿using APZMS.DTOs;
-using APZMS.Services;
-using APZMS.Utilities;
+﻿using APZMS.Application.DTOs;
+using APZMS.Application.Interfaces;
+using APZMS.Application.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APZMS.Controllers

@@ -72,6 +72,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "APZMS.Controllers.ActivitiesController",
+    "Method": "GetById",
+    "RelativePath": "api/v1/activities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "APZMS.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/v1/auth/login",
@@ -81,7 +97,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "APZMS.DTOs.UserLoginDto",
+        "Type": "APZMS.Application.DTOs.UserLoginDto",
         "IsRequired": true
       }
     ],
@@ -97,97 +113,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "APZMS.DTOs.UserRegistrationDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APZMS.Controllers.BookingController",
-    "Method": "BookSlots",
-    "RelativePath": "api/v1/bookings",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "APZMS.DTOs.BookingDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APZMS.Controllers.BookingController",
-    "Method": "GetBookings",
-    "RelativePath": "api/v1/bookings/{bookingId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "bookingId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APZMS.Controllers.BookingController",
-    "Method": "UpdateBooking",
-    "RelativePath": "api/v1/bookings/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "APZMS.DTOs.BookingUpdateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APZMS.Controllers.BookingController",
-    "Method": "PatchCustomer",
-    "RelativePath": "api/v1/bookings/{id}",
-    "HttpMethod": "PATCH",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "APZMS.DTOs.BookingPatchDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APZMS.Controllers.BookingController",
-    "Method": "CancleBooking",
-    "RelativePath": "api/v1/bookings/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
+        "Type": "APZMS.Application.DTOs.UserRegistrationDto",
         "IsRequired": true
       }
     ],
@@ -196,11 +122,21 @@
   {
     "ContainingType": "APZMS.Controllers.BookingController",
     "Method": "GetFilteredBookings",
-    "RelativePath": "api/v1/bookings/filter",
+    "RelativePath": "api/v1/bookings",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
       {
         "Name": "customerName",
         "Type": "System.String",
@@ -225,6 +161,96 @@
         "Name": "bookingDateTo",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "BookSlots",
+    "RelativePath": "api/v1/bookings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APZMS.Application.DTOs.BookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "GetBookings",
+    "RelativePath": "api/v1/bookings/{bookingId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "UpdateBooking",
+    "RelativePath": "api/v1/bookings/{bookingId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "APZMS.Application.DTOs.BookingUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "PatchBooking",
+    "RelativePath": "api/v1/bookings/{bookingId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "APZMS.Application.DTOs.BookingPatchDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APZMS.Controllers.BookingController",
+    "Method": "CancleBooking",
+    "RelativePath": "api/v1/bookings/{bookingId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

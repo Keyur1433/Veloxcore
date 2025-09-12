@@ -1,0 +1,16 @@
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.csproj.AssemblyReference.cache
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.AssemblyInfoInputs.cache
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.AssemblyInfo.cs
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.csproj.CoreCompileInputs.cache
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.sourcelink.json
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\bin\Debug\net8.0\APZMS.Application.deps.json
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\bin\Debug\net8.0\APZMS.Application.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\bin\Debug\net8.0\APZMS.Application.pdb
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\bin\Debug\net8.0\APZMS.Domain.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\bin\Debug\net8.0\APZMS.Domain.pdb
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Ap.50547384.Up2Date
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\refint\APZMS.Application.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\APZMS.Application.pdb
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Application\obj\Debug\net8.0\ref\APZMS.Application.dll

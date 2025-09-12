@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.infrastructure\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|solutionrelative:apzms.infrastructure\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3878430C-5158-4D18-8466-22926D09F854}|APZMS.Application\\APZMS.Application.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.application\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3878430C-5158-4D18-8466-22926D09F854}|APZMS.Application\\APZMS.Application.csproj|solutionrelative:apzms.application\\interfaces\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.domain\\exceptions\\customernotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|solutionrelative:apzms.domain\\exceptions\\customernotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.domain\\exceptions\\activitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|solutionrelative:apzms.domain\\exceptions\\activitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.infrastructure\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|solutionrelative:apzms.infrastructure\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.domain\\exceptions\\bookingnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|solutionrelative:apzms.domain\\exceptions\\bookingnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.csproj|solutionrelative:apzms\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 223,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Repositories\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "APZMS.Infrastructure\\Repositories\\BookingRepository.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Repositories\\BookingRepository.cs",
+              "RelativeToolTip": "APZMS.Infrastructure\\Repositories\\BookingRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T13:29:04.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IBookingRepository.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Application\\Interfaces\\IBookingRepository.cs",
+              "RelativeDocumentMoniker": "APZMS.Application\\Interfaces\\IBookingRepository.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Application\\Interfaces\\IBookingRepository.cs",
+              "RelativeToolTip": "APZMS.Application\\Interfaces\\IBookingRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T13:28:11.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "APZMS\\Controllers\\BookingController.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "APZMS\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T11:39:37.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ActivityNotFoundException.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "RelativeDocumentMoniker": "APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "RelativeToolTip": "APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T13:19:08.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerNotFoundException.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\CustomerNotFoundException.cs",
+              "RelativeDocumentMoniker": "APZMS.Domain\\Exceptions\\CustomerNotFoundException.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\CustomerNotFoundException.cs",
+              "RelativeToolTip": "APZMS.Domain\\Exceptions\\CustomerNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T13:18:34.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookingNotFoundException.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\BookingNotFoundException.cs",
+              "RelativeDocumentMoniker": "APZMS.Domain\\Exceptions\\BookingNotFoundException.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\BookingNotFoundException.cs",
+              "RelativeToolTip": "APZMS.Domain\\Exceptions\\BookingNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:47:08.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "APZMS.Infrastructure\\Services\\BookingService.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Services\\BookingService.cs",
+              "RelativeToolTip": "APZMS.Infrastructure\\Services\\BookingService.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAArwK4AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:09:26.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ActivitiesController.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\ActivitiesController.cs",
+              "RelativeDocumentMoniker": "APZMS\\Controllers\\ActivitiesController.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\ActivitiesController.cs",
+              "RelativeToolTip": "APZMS\\Controllers\\ActivitiesController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T11:49:56.449Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

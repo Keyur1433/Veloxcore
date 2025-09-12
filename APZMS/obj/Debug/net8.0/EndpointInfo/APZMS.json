@@ -125,7 +125,97 @@
         }
       }
     },
+    "/api/v1/activities/{id}": {
+      "get": {
+        "tags": [
+          "Activities"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/bookings": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 20
+            }
+          },
+          {
+            "name": "customerName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "activityName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "safetyLevel",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bookingDateFrom",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "bookingDateTo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "tags": [
           "Booking"
@@ -176,16 +266,14 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/v1/bookings/{id}": {
+      },
       "put": {
         "tags": [
           "Booking"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "bookingId",
             "in": "path",
             "required": true,
             "schema": {
@@ -224,7 +312,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "bookingId",
             "in": "path",
             "required": true,
             "schema": {
@@ -263,62 +351,11 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "bookingId",
             "in": "path",
             "required": true,
             "schema": {
               "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1/bookings/filter": {
-      "get": {
-        "tags": [
-          "Booking"
-        ],
-        "parameters": [
-          {
-            "name": "customerName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "activityName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "safetyLevel",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "bookingDateFrom",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "bookingDateTo",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
             }
           }
         ],

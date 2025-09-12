@@ -1,5 +1,5 @@
-﻿using APZMS.DTOs;
-using APZMS.Services;
+﻿using APZMS.Application.DTOs;
+using APZMS.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,14 +16,13 @@ namespace APZMS.Controllers
             _bookingService = bookingService;
         }
 
-        // ToDo:
-        // (Follow rest api conventions)
-        // Get all bookings with filters and pagination
-        // Get by id
-        // Post
-        // Put
-        // Patch
-        // Delete
+        [HttpGet]
+        [Authorize(Roles = "staff, admin")]
+        public async Task<IActionResult> GetFilteredBookings(int pageNumber = 1, int pageSize = 20, string? customerName = null, string? activityName = null, string? safetyLevel = null, DateTime? bookingDateFrom = null, DateTime? bookingDateTo = null)
+        {
+            var result = await _bookingService.GetFilteredBookings(pageNumber, pageSize, customerName, activityName, safetyLevel, bookingDateFrom, bookingDateTo);
+            return Ok(result);
+        }
 
         [HttpPost]
         public async Task<IActionResult> BookSlots(BookingDto dto)
@@ -53,25 +52,24 @@ namespace APZMS.Controllers
         {
             try
             {
-                var result = await _bookingService.GetBookingsAsync(bookingId);
+                int id = int.Parse(bookingId);
+
+                var result = await _bookingService.GetBookingsByIdAsync(id);
                 return StatusCode(200, new { result });
             }
             catch (KeyNotFoundException ex)
             {
                 return NotFound(ex.Message);
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{bookingId}")]
         [Authorize(Roles = "customer")]
-        public async Task<IActionResult> UpdateBooking(string id, BookingUpdateDto dto)
+        public async Task<IActionResult> UpdateBooking(string bookingId, BookingUpdateDto dto)
         {
             try
             {
+                int id = int.Parse(bookingId);
                 var result = await _bookingService.UpdateBookingAsync(id, dto);
 
                 return StatusCode(200, new { result });
@@ -86,42 +84,24 @@ namespace APZMS.Controllers
             }
         }
 
-        [HttpPatch("{id}")]
+        [HttpPatch("{bookingId}")]
         [Authorize(Roles = "customer")]
-        public async Task<IActionResult> PatchCustomer(string id, BookingPatchDto dto)
+        public async Task<IActionResult> PatchBooking(string bookingId, BookingPatchDto dto)
         {
+            int id = int.Parse(bookingId);
             var result = await _bookingService.PatchBookingAsync(id, dto);
 
             return StatusCode(200, new { result });
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{bookingId}")]
         [Authorize(Roles = "customer")]
-        public async Task<IActionResult> CancleBooking(string id)
+        public async Task<IActionResult> CancleBooking(string bookingId)
         {
+            int id = int.Parse(bookingId);
             var result = await _bookingService.CancleBookingAsync(id);
 
             return StatusCode(200, new { result });
-        }
-
-        [HttpGet("filter")]
-        [Authorize(Roles = "staff, admin")]
-        public async Task<IActionResult> GetFilteredBookings([FromQuery] string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
-        {
-            try
-            {
-                var filteredBookings = await _bookingService.GetFilteredBookings(customerName, activityName, safetyLevel, bookingDateFrom, bookingDateTo);
-
-                return Ok(new { filteredBookings });
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
         }
     }
 }
