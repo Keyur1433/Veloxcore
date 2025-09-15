@@ -6,6 +6,5 @@ namespace APZMS.Application.Interfaces
     public interface IUserService
     {
         Task<User> RegisterUserAsync(UserRegistrationDto dto);
-        Task<bool> EmailExistsAsync(string email);
     }
 }

@@ -16,92 +16,53 @@ namespace APZMS.Controllers
             _bookingService = bookingService;
         }
 
+        // GET: api/v1/bookings?pageSize,pageIndex,name...
         [HttpGet]
         [Authorize(Roles = "staff, admin")]
-        public async Task<IActionResult> GetFilteredBookings(int pageNumber = 1, int pageSize = 20, string? customerName = null, string? activityName = null, string? safetyLevel = null, DateTime? bookingDateFrom = null, DateTime? bookingDateTo = null)
+        public async Task<IActionResult> GetFilteredBookings(int? pageNumber = null, int? pageSize = null, string? customerName = null, string? activityName = null, string? safetyLevel = null, DateTime? bookingDateFrom = null, DateTime? bookingDateTo = null)
         {
-            var result = await _bookingService.GetFilteredBookings(pageNumber, pageSize, customerName, activityName, safetyLevel, bookingDateFrom, bookingDateTo);
-            return Ok(result);
+            var filteredBookings = await _bookingService.GetFilteredBookings(pageNumber, pageSize, customerName, activityName, safetyLevel, bookingDateFrom, bookingDateTo);
+
+            return Ok(filteredBookings);
         }
 
         [HttpPost]
         public async Task<IActionResult> BookSlots(BookingDto dto)
         {
-            try
-            {
-                var booking = await _bookingService.AddBookingAsync(dto);
-                return Ok(new { booking });
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (ArgumentOutOfRangeException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var booking = await _bookingService.AddBookingAsync(dto);
+            return Ok(booking);
         }
 
         [HttpGet("{bookingId}")]
         [Authorize(Roles = "staff, admin")]
-        public async Task<IActionResult> GetBookings(string bookingId)
+        public async Task<IActionResult> GetBooking(int bookingId)
         {
-            try
-            {
-                int id = int.Parse(bookingId);
-
-                var result = await _bookingService.GetBookingsByIdAsync(id);
-                return StatusCode(200, new { result });
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
+            var result = await _bookingService.GetBookingsByIdAsync(bookingId);
+            return Ok(result);
         }
 
         [HttpPut("{bookingId}")]
         [Authorize(Roles = "customer")]
-        public async Task<IActionResult> UpdateBooking(string bookingId, BookingUpdateDto dto)
+        public async Task<IActionResult> UpdateBooking(int bookingId, BookingUpdateDto dto)
         {
-            try
-            {
-                int id = int.Parse(bookingId);
-                var result = await _bookingService.UpdateBookingAsync(id, dto);
-
-                return StatusCode(200, new { result });
-            }
-            catch (KeyNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _bookingService.UpdateBookingAsync(bookingId, dto);
+            return Ok(result);
         }
 
         [HttpPatch("{bookingId}")]
         [Authorize(Roles = "customer")]
-        public async Task<IActionResult> PatchBooking(string bookingId, BookingPatchDto dto)
+        public async Task<IActionResult> PatchBooking(int bookingId, BookingPatchDto dto)
         {
-            int id = int.Parse(bookingId);
-            var result = await _bookingService.PatchBookingAsync(id, dto);
-
-            return StatusCode(200, new { result });
+            var result = await _bookingService.PatchBookingAsync(bookingId, dto);
+            return Ok(result);
         }
 
         [HttpDelete("{bookingId}")]
         [Authorize(Roles = "customer")]
-        public async Task<IActionResult> CancleBooking(string bookingId)
+        public async Task<IActionResult> CancleBooking(int bookingId)
         {
-            int id = int.Parse(bookingId);
-            var result = await _bookingService.CancleBookingAsync(id);
-
-            return StatusCode(200, new { result });
+            var result = await _bookingService.CancleBookingAsync(bookingId);
+            return Ok(result);
         }
     }
 }

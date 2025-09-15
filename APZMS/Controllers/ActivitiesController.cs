@@ -18,31 +18,19 @@ namespace APZMS.Controllers
 
         [HttpPost]
         [Authorize(Roles = "customer, staff")]
-        public async Task<IActionResult> AddActivity([FromForm] AddActivityDto dto)
+        public async Task<IActionResult> AddActivity(AddActivityDto dto)
         {
-            try
-            {
-                var activity = await _activityService.AddActivityAsync(dto);
 
-                
-                return CreatedAtAction(nameof(GetById), new
-                {
-                    activityId = activity.Id,
-                    activityName = activity.Name,
-                    message = "Activity created successfully.",
-                    photoUrl = activity.PhotoUrl,
-                });
-            }
-            catch (ArgumentException ex)
+            var activity = await _activityService.AddActivityAsync(dto);
+
+            return CreatedAtAction(nameof(GetById), new { id = activity.Id }, new
             {
-                return BadRequest(new
-                {
-                    errors = new[]
-                    {
-                        new {field = "ageRange", message = ex.Message}
-                    }
-                });
-            }
+                activityId = activity.Id,
+                activityName = activity.Name,
+                message = "Activity created successfully.",
+                photoUrl = activity.PhotoUrl,
+            });
+
         }
 
         [HttpGet]
@@ -57,7 +45,9 @@ namespace APZMS.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var activity = await _activityService.GetByIdAsync(id);
+
             if (activity == null) return NotFound();
+
             return Ok(activity);
         }
     }

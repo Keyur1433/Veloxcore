@@ -18,22 +18,11 @@ namespace APZMS.Controllers
 
         [HttpGet("activity-revenue")]
         [Authorize(Roles = "admin, staff")]
-        public async Task<IActionResult> GetActivityRevenue([FromQuery]string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
+        public async Task<IActionResult> GetActivityRevenue(string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
         {
-            try
-            {
-                var result = await _report.GetActivityRevenueAsync(safetyLevel, bookingDateFrom, bookingDateTo);
+            var result = await _report.GetActivityRevenueAsync(safetyLevel, bookingDateFrom, bookingDateTo);
 
-                return Ok(new { result });
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex) 
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(result);
         }
 
         [HttpGet("customer-history/{customerId}")]
@@ -52,9 +41,9 @@ namespace APZMS.Controllers
                 return BadRequest("customerId not provided");
             }
 
-                var result = await _report.GetCustomerHistoryAsync(id, role, activityName, bookingDateFrom, bookingDateTo);
+            var result = await _report.GetCustomerHistoryAsync(id, role, activityName, bookingDateFrom, bookingDateTo);
 
-            return Ok(new { result });  
+            return Ok(result);
         }
     }
 }

@@ -1,23 +1,21 @@
-﻿using APZMS.Application.DTOs;
+﻿using APZMS.Application.Common;
+using APZMS.Application.DTOs;
 using APZMS.Application.Interfaces;
-using APZMS.Application.Common;
+using APZMS.Domain.Exceptions;
 using Microsoft.EntityFrameworkCore;
-using APZMS.Infrastructure.Database;
 
 namespace APZMS.Infrastructure.Services
 {
     public class ReportService : IReportService
     {
-        private readonly AppDbContext _context;
         private readonly DynamicPricing _dynamicPricing;
         private readonly IReportRepository _reportRepository;
         private readonly IUserRepository _userRepository;
         private readonly IActivityRepository _activityRepository;
         private readonly IBookingRepository _bookingRepository;
 
-        public ReportService(AppDbContext context, DynamicPricing dynamicPricing, IReportRepository reportRepository, IUserRepository userRepository, IActivityRepository activityRepository, IBookingRepository bookingRepository)
+        public ReportService(DynamicPricing dynamicPricing, IReportRepository reportRepository, IUserRepository userRepository, IActivityRepository activityRepository, IBookingRepository bookingRepository)
         {
-            _context = context;
             _dynamicPricing = dynamicPricing;
             _reportRepository = reportRepository;
             _userRepository = userRepository;
@@ -27,7 +25,6 @@ namespace APZMS.Infrastructure.Services
 
         public async Task<IEnumerable<ActivityRevenueResponse>> GetActivityRevenueAsync(string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
         {
-            //var activities = _context.Activities.AsQueryable();
             var activities = _reportRepository.GetActivityAsQueryable();
 
             if (!string.IsNullOrWhiteSpace(safetyLevel))
@@ -35,14 +32,13 @@ namespace APZMS.Infrastructure.Services
                 activities = activities.Where(a => a.SafetyLevel == safetyLevel);
             }
 
-            //var bookings = _context.Bookings.AsQueryable();
             var bookings = _bookingRepository.GetBookingAsQueryable();
 
             if (bookingDateFrom.HasValue || bookingDateTo.HasValue)
             {
                 if (!bookingDateFrom.HasValue || !bookingDateTo.HasValue)
                 {
-                    throw new ArgumentException("Both bookingDateFrom and bookingDateTo must be provided for date filtering.");
+                    throw new InvalidDateRangeException("Both bookingDateFrom and bookingDateTo must be provided for date filtering.");
                 }
 
                 bookings = bookings.Where(b => b.BookingDate >= bookingDateFrom && b.BookingDate <= bookingDateTo);
@@ -89,9 +85,6 @@ namespace APZMS.Infrastructure.Services
 
         public async Task<Root> GetCustomerHistoryAsync(string? id, string? role, string? activityName, DateTime? bookingDateFrom, DateTime? bookingDateTo)
         {
-            //var customers = _context.Users.AsQueryable();
-            //var bookings = _context.Bookings.AsQueryable();
-            //var activities = _context.Activities.AsQueryable();
 
             var customers = _userRepository.GetUserAsQueryable();
             var bookings = _bookingRepository.GetBookingAsQueryable();

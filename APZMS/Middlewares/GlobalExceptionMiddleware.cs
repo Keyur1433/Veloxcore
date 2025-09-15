@@ -1,4 +1,5 @@
 ﻿using APZMS.Domain.Exceptions;
+using System.Text.Json;
 
 namespace APZMS.Middlewares
 {
@@ -13,21 +14,31 @@ namespace APZMS.Middlewares
             _logger = logger;
         }
 
-        public async Task Invoke(HttpContext httpContext)
+        public async Task InvokeAsync(HttpContext context)
         {
             try
             {
-                await _next(httpContext);
-            }
-            catch (BookingNotFoundException ex)
-            {
-                httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await httpContext.Response.WriteAsync(ex.Message);
+                await _next(context);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
-                await httpContext.Response.WriteAsync("An unexpected error occurred");
+                _logger.LogError(ex, "Global exception caught: {Message}", ex.Message);
+
+                context.Response.ContentType = "application/json";
+                context.Response.StatusCode = ex switch
+                {
+                    DomainException => StatusCodes.Status404NotFound,
+                    KeyNotFoundException => StatusCodes.Status404NotFound,
+                    ArgumentOutOfRangeException => StatusCodes.Status400BadRequest,
+                    _ => StatusCodes.Status500InternalServerError,
+                };
+
+                var errorResponse = new
+                {
+                    message = context.Response.StatusCode == 500 ? "An unexpected error occurred." : ex.Message,
+                };
+
+                await context.Response.WriteAsync(JsonSerializer.Serialize(errorResponse));
             }
             
         }

@@ -288,5 +288,5 @@ E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\bin\Debug
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\bin\Debug\net8.0\APZMS.Domain.pdb
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\bin\Debug\net8.0\APZMS.Application.pdb
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\bin\Debug\net8.0\APZMS.Infrastructure.pdb
-E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\obj\Debug\net8.0\swae.build.ex.cache
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS\obj\Debug\net8.0\swae.build.ex.cache

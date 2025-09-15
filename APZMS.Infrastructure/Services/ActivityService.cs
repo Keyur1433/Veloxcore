@@ -1,7 +1,8 @@
-﻿using APZMS.Infrastructure.Database;
-using APZMS.Application.DTOs;
-using APZMS.Domain.Models;
+﻿using APZMS.Application.DTOs;
 using APZMS.Application.Interfaces;
+using APZMS.Domain.Exceptions;
+using APZMS.Domain.Models;
+using APZMS.Infrastructure.Database;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,7 +25,7 @@ namespace APZMS.Infrastructure.Services
         {
             if(dto.MinAge > dto.MaxAge)
             {
-                throw new ArgumentException("Maximum age must be greater than minimum age.");
+                throw new InvalidAgeRangeException("Maximum age must be greater than minimum age.");
             }
 
             var webRoot = _env.WebRootPath;
@@ -70,7 +71,6 @@ namespace APZMS.Infrastructure.Services
 
         public async Task<IEnumerable<ActivityResponseDto>> GetActivitiesAsync(string? ageGroup, string? safetyLevel)
         {
-            //var query = _context.Activities.AsQueryable();
             var query = _activityRepository.GetActivityAsQueryable();
 
             //Filter by safetyLevel

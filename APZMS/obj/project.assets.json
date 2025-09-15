@@ -5362,9 +5362,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.csproj",
-      "projectName": "APZMS",
-      "projectPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.csproj",
+      "projectUniqueName": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.API.csproj",
+      "projectName": "APZMS.API",
+      "projectPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\APZMS.API.csproj",
       "packagesPath": "C:\\Users\\KeyurAjudiya\\.nuget\\packages\\",
       "outputPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR & AuthT)\\APZMS\\obj\\",
       "projectStyle": "PackageReference",

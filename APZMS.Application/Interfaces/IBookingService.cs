@@ -7,7 +7,7 @@ namespace APZMS.Application.Interfaces
     {
         Task<BookingResponseDto> AddBookingAsync(BookingDto dto);
 
-        Task<IEnumerable<BookingFilteredItemResponseDto>> GetFilteredBookings(int pageNumber, int pageSize, string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo);
+        Task<IEnumerable<BookingFilteredItemResponseDto>> GetFilteredBookings(int? pageNumber, int? pageSize, string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo);
 
         Task<BookingResponseDto> GetBookingsByIdAsync(int bookingId);
 

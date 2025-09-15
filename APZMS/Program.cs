@@ -13,7 +13,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using APZMS.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -93,11 +92,9 @@ app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(physicalWebRoot)
 });
-
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
-app.UseMiddleware<GlobalExceptionMiddleware>();
 app.UseAuthorization();
 
 app.MapControllers();

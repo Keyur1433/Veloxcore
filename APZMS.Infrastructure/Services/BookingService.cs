@@ -1,11 +1,13 @@
-﻿using APZMS.Application.Common;
-using APZMS.Application.DTOs;
-using APZMS.Application.Interfaces;
-using APZMS.Domain.Exceptions;
+﻿using APZMS.Application.DTOs;
 using APZMS.Domain.Models;
-using APZMS.Infrastructure.Database;
+using APZMS.Domain.Models.Views;
+using APZMS.Application.Interfaces;
+using APZMS.Application.Common;
 using AutoMapper;
+using System.Diagnostics;
+using APZMS.Infrastructure.Database;
 using Microsoft.AspNetCore.Http;
+using APZMS.Domain.Exceptions;
 namespace APZMS.Infrastructure.Services
 {
     public class BookingService : IBookingService
@@ -31,10 +33,10 @@ namespace APZMS.Infrastructure.Services
             var activity = await _activityRepository.GetByIdAsync(dto.ActivityId);
 
             if (customer == null)
-                throw new KeyNotFoundException("Customer not found");
+                throw new CustomerNotFoundException($"Customer not found with customer id {dto.CustomerId}");
 
             if (activity == null)
-                throw new KeyNotFoundException("Activity not found");
+                throw new ActivityNotFoundException($"Activity not found with activity id {dto.ActivityId}");
 
             if (dto.Participants > activity.Capacity || dto.Participants < 0)
                 throw new ArgumentOutOfRangeException("Participants exceed activity capacity.");
@@ -71,18 +73,18 @@ namespace APZMS.Infrastructure.Services
 
             if (booking == null)
             {
-                throw new KeyNotFoundException("Booking not found");
+                throw new BookingNotFoundException($"Booking not found with booking id {id}");
             }
             else { }
 
             var customer = await _userRepository.GetByIdAsync(booking.CustomerId);
             var activity = await _activityRepository.GetByIdAsync(booking.ActivityId);
 
-            if (activity == null)
-                throw new KeyNotFoundException("Activity not found");
-
             if (customer == null)
-                throw new KeyNotFoundException("Customer not found");
+                throw new CustomerNotFoundException($"Customer not found with customer id {dto.CustomerId}");
+
+            if (activity == null)
+                throw new ActivityNotFoundException($"Activity not found with activity id {dto.ActivityId}");
 
             if (dto.Participants > activity.Capacity || dto.Participants < 0)
                 throw new ArgumentOutOfRangeException("Participants exceed activity capacity.");
@@ -113,7 +115,7 @@ namespace APZMS.Infrastructure.Services
             var booking = await _bookingRepository.GetByIdAsync(id);
 
             if (booking == null)
-                throw new KeyNotFoundException($"{nameof(booking)} not found");
+                throw new BookingNotFoundException($"Booking not found with booking id {id}");
 
             _mapper.Map(dto, booking);
 
@@ -127,7 +129,7 @@ namespace APZMS.Infrastructure.Services
             var booking = await _bookingRepository.GetByIdAsync(id);
 
             if (booking == null)
-                throw new BookingNotFoundException("Booking not found");
+                throw new BookingNotFoundException($"Booking not found with booking id {id}");
 
             _bookingRepository.Delete(booking);
             await _bookingRepository.SaveChangesAsync();
@@ -140,7 +142,7 @@ namespace APZMS.Infrastructure.Services
             var booking = await _bookingRepository.GetByIdAsync(bookingId);
 
             if (booking == null)
-                throw new KeyNotFoundException("Booking not found");
+                throw new BookingNotFoundException($"Booking not found with booking id {bookingId}");
 
             var activity = await _activityRepository.GetByIdAsync(booking.ActivityId);
             var customer = await _userRepository.GetByIdAsync(booking.CustomerId);
@@ -159,7 +161,7 @@ namespace APZMS.Infrastructure.Services
             };
         }
 
-        public async Task<IEnumerable<BookingFilteredItemResponseDto>> GetFilteredBookings(int pageNumber, int pageSize, string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
+        public async Task<IEnumerable<BookingFilteredItemResponseDto>> GetFilteredBookings(int? pageNumber, int? pageSize, string? customerName, string? activityName, string? safetyLevel, DateTime? bookingDateFrom, DateTime? bookingDateTo)
         {
             // Validation
             if (pageSize > 500)
