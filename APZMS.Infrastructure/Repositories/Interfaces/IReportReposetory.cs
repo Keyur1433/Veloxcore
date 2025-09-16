@@ -1,6 +1,6 @@
 ﻿using APZMS.Domain.Models;
 
-namespace APZMS.Application.Interfaces
+namespace APZMS.Infrastructure.Repositories.Interfaces
 {
     public interface IReportRepository
     {

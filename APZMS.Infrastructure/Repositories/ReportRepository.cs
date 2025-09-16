@@ -1,10 +1,10 @@
 ﻿using APZMS.Infrastructure.Database;
 using APZMS.Domain.Models;
-using APZMS.Application.Interfaces;
+using APZMS.Infrastructure.Repositories.Interfaces;
 
 namespace APZMS.Infrastructure.Repositories
 {
-    public class ReportRepository : IReportRepository
+    internal class ReportRepository : IReportRepository
     {
         private readonly AppDbContext _context;
 

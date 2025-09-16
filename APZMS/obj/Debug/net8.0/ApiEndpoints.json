@@ -183,7 +183,7 @@
   },
   {
     "ContainingType": "APZMS.Controllers.BookingController",
-    "Method": "GetBookings",
+    "Method": "GetBooking",
     "RelativePath": "api/v1/bookings/{bookingId}",
     "HttpMethod": "GET",
     "IsController": true,

@@ -1,12 +1,11 @@
 ﻿using APZMS.Infrastructure.Database;
 using APZMS.Domain.Models;
-using APZMS.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
+using APZMS.Infrastructure.Repositories.Interfaces;
 
 namespace APZMS.Infrastructure.Repositories
 {
-    public class UserRepository : IUserRepository
+    internal class UserRepository : IUserRepository
     {
         private readonly AppDbContext _context;
         public UserRepository(AppDbContext context) => _context = context;

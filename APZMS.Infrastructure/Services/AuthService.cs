@@ -3,12 +3,12 @@ using APZMS.Domain.Models;
 using APZMS.Application.Interfaces;
 using APZMS.Application.Common;
 using Microsoft.AspNetCore.Identity;
+using APZMS.Infrastructure.Repositories.Interfaces;
 
 namespace APZMS.Infrastructure.Services
 {
     public class AuthService : IAuthService
     {
-        //private readonly AppDbContext _context;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly IJwtTokenGenerator _jwtTokenGenerator;
         private readonly IUserRepository _userRepository;

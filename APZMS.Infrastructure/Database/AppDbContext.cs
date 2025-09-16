@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APZMS.Infrastructure.Database
 {
-    public class AppDbContext: DbContext
+    internal class AppDbContext: DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

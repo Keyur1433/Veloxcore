@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APZMS.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24a326838daa82d15f87193a9b93ef7987686f99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4feda314478af53f2f7b9dcdfcbd2defe3da1e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("APZMS.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APZMS.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

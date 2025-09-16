@@ -18,5 +18,5 @@ namespace APZMS.Domain.Models
 
         public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
     }
-
 }
+

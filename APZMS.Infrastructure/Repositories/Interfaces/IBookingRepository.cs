@@ -1,8 +1,7 @@
-﻿using APZMS.Application.DTOs;
-using APZMS.Domain.Models;
+﻿using APZMS.Domain.Models;
 using APZMS.Domain.Models.Views;
 
-namespace APZMS.Application.Interfaces
+namespace APZMS.Infrastructure.Repositories.Interfaces
 {
     public interface IBookingRepository : IRepository<Booking>
     {

@@ -20,7 +20,6 @@ namespace APZMS.Controllers
         [Authorize(Roles = "customer, staff")]
         public async Task<IActionResult> AddActivity(AddActivityDto dto)
         {
-
             var activity = await _activityService.AddActivityAsync(dto);
 
             return CreatedAtAction(nameof(GetById), new { id = activity.Id }, new
@@ -30,7 +29,6 @@ namespace APZMS.Controllers
                 message = "Activity created successfully.",
                 photoUrl = activity.PhotoUrl,
             });
-
         }
 
         [HttpGet]

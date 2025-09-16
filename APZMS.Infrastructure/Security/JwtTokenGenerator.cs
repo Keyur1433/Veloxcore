@@ -1,4 +1,4 @@
-﻿using APZMS.Domain.Models;
+using APZMS.Domain.Models;
 using APZMS.Application.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace APZMS.Infrastructure.Security
 {
-    public class JwtTokenGenerator : IJwtTokenGenerator
+    internal class JwtTokenGenerator : IJwtTokenGenerator
     {
         private readonly IConfiguration _config;
 

@@ -1,11 +1,11 @@
 ﻿using APZMS.Infrastructure.Database;
 using APZMS.Domain.Models;
-using APZMS.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using APZMS.Infrastructure.Repositories.Interfaces;
 
 namespace APZMS.Infrastructure.Repositories
 {
-    public class ActivityRepository : IActivityRepository
+    internal class ActivityRepository : IActivityRepository
     {
         private readonly AppDbContext _context;
         public ActivityRepository(AppDbContext context) => _context = context;

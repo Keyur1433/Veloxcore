@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.infrastructure\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|solutionrelative:apzms.infrastructure\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.API.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.API.csproj|solutionrelative:apzms\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.infrastructure\\services\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|solutionrelative:apzms.infrastructure\\services\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.infrastructure\\registrationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E10E540-9827-4E07-9CD2-882BC836C786}|APZMS.Infrastructure\\APZMS.Infrastructure.csproj|solutionrelative:apzms.infrastructure\\registrationextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|solutionrelative:apzms.domain\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.API.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\middlewares\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.API.csproj|solutionrelative:apzms\\middlewares\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.API.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{563FC6D8-008F-4513-B561-659830BC9A83}|APZMS\\APZMS.API.csproj|solutionrelative:apzms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|e:\\veloxcore\\modules code\\dotnet\\apzms (crud with authr \u0026 autht)\\apzms.domain\\exceptions\\activitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FD53458-80BB-4860-BA52-62F540661333}|APZMS.Domain\\APZMS.Domain.csproj|solutionrelative:apzms.domain\\exceptions\\activitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +42,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "APZMS.Infrastructure\\Services\\ReportService.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Services\\ReportService.cs",
+              "RelativeToolTip": "APZMS.Infrastructure\\Services\\ReportService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T08:52:35.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegistrationExtension.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\RegistrationExtension.cs",
+              "RelativeDocumentMoniker": "APZMS.Infrastructure\\RegistrationExtension.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\RegistrationExtension.cs",
+              "RelativeToolTip": "APZMS.Infrastructure\\RegistrationExtension.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T08:48:48.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAACMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T07:15:17.174Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -30,28 +93,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GlobalExceptionMiddleware.cs",
-              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
-              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
-              "RelativeToolTip": "APZMS\\Middlewares\\GlobalExceptionMiddleware.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Program.cs",
+              "RelativeDocumentMoniker": "APZMS\\Program.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Program.cs",
+              "RelativeToolTip": "APZMS\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T09:39:32.208Z",
+              "WhenOpened": "2025-09-16T07:24:25.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "DomainException.cs",
               "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\DomainException.cs",
               "RelativeDocumentMoniker": "APZMS.Domain\\Exceptions\\DomainException.cs",
               "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\DomainException.cs",
               "RelativeToolTip": "APZMS.Domain\\Exceptions\\DomainException.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T09:38:58.678Z",
+              "WhenOpened": "2025-09-16T07:17:09.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ActivityNotFoundException.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "RelativeDocumentMoniker": "APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "RelativeToolTip": "APZMS.Domain\\Exceptions\\ActivityNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T07:17:58.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ActivitiesController.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\ActivitiesController.cs",
+              "RelativeDocumentMoniker": "APZMS\\Controllers\\ActivitiesController.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS\\Controllers\\ActivitiesController.cs",
+              "RelativeToolTip": "APZMS\\Controllers\\ActivitiesController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T07:16:06.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ActivityService.cs",
+              "DocumentMoniker": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Services\\ActivityService.cs",
+              "RelativeDocumentMoniker": "APZMS.Infrastructure\\Services\\ActivityService.cs",
+              "ToolTip": "E:\\Veloxcore\\Modules Code\\DotNet\\APZMS (CRUD with AuthR \u0026 AuthT)\\APZMS.Infrastructure\\Services\\ActivityService.cs",
+              "RelativeToolTip": "APZMS.Infrastructure\\Services\\ActivityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T07:14:36.206Z",
               "EditorCaption": ""
             }
           ]

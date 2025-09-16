@@ -1,7 +1,7 @@
 ﻿using APZMS.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace APZMS.Application.Interfaces
+namespace APZMS.Infrastructure.Repositories.Interfaces
 {
     public interface IUserRepository
     {

@@ -16,3 +16,5 @@ E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Infrastru
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Infrastructure\obj\Debug\net8.0\refint\APZMS.Infrastructure.dll
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Infrastructure\obj\Debug\net8.0\APZMS.Infrastructure.pdb
 E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Infrastructure\obj\Debug\net8.0\ref\APZMS.Infrastructure.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Infrastructure\bin\Debug\net8.0\APZMS.Infrastructure.runtimeconfig.json
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Infrastructure\obj\Debug\net8.0\APZMS.Infrastructure.genruntimeconfig.cache

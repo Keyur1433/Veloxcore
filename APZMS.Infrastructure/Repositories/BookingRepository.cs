@@ -1,12 +1,12 @@
 ﻿using APZMS.Infrastructure.Database;
 using APZMS.Domain.Models;
 using APZMS.Domain.Models.Views;
-using APZMS.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using APZMS.Infrastructure.Repositories.Interfaces;
 
 namespace APZMS.Infrastructure.Repositories
 {
-    public class BookingRepository : IBookingRepository
+    internal class BookingRepository : IBookingRepository
     {
         private readonly AppDbContext _context;
         public BookingRepository(AppDbContext context) { _context = context; }

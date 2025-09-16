@@ -2,7 +2,7 @@
 using APZMS.Application.Interfaces;
 using APZMS.Domain.Exceptions;
 using APZMS.Domain.Models;
-using APZMS.Infrastructure.Database;
+using APZMS.Infrastructure.Repositories.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,13 +10,11 @@ namespace APZMS.Infrastructure.Services
 {
     public class ActivityService : IActivityService
     {
-        private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;
         private readonly IActivityRepository _activityRepository;
 
-        public ActivityService(AppDbContext context, IWebHostEnvironment env, IActivityRepository activityRepository)
+        public ActivityService(IWebHostEnvironment env, IActivityRepository activityRepository)
         {
-            _context = context;
             _env = env;
             _activityRepository = activityRepository;
         }

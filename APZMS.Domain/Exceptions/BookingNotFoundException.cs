@@ -2,7 +2,7 @@
 
 namespace APZMS.Domain.Exceptions
 {
-    public class BookingNotFoundException : Exception
+    public class BookingNotFoundException : DomainException
     {
         public BookingNotFoundException()
             : base("The requested booking was not found") { }

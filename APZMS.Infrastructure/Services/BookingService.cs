@@ -1,13 +1,12 @@
 ﻿using APZMS.Application.DTOs;
 using APZMS.Domain.Models;
-using APZMS.Domain.Models.Views;
 using APZMS.Application.Interfaces;
 using APZMS.Application.Common;
 using AutoMapper;
-using System.Diagnostics;
-using APZMS.Infrastructure.Database;
 using Microsoft.AspNetCore.Http;
 using APZMS.Domain.Exceptions;
+using APZMS.Infrastructure.Repositories.Interfaces;
+
 namespace APZMS.Infrastructure.Services
 {
     public class BookingService : IBookingService
@@ -18,7 +17,7 @@ namespace APZMS.Infrastructure.Services
         private readonly IActivityRepository _activityRepository;
         private readonly IUserRepository _userRepository;
 
-        public BookingService(AppDbContext context, DynamicPricing dynamicPricing, IMapper mapper, IBookingRepository bookingRepository, IUserRepository userRepository, IActivityRepository activityRepository)
+        public BookingService(DynamicPricing dynamicPricing, IMapper mapper, IBookingRepository bookingRepository, IUserRepository userRepository, IActivityRepository activityRepository)
         {
             _dynamicPricing = dynamicPricing;
             _mapper = mapper;

@@ -2,20 +2,18 @@
 using APZMS.Application.Interfaces;
 using APZMS.Domain.Exceptions;
 using APZMS.Domain.Models;
-using APZMS.Infrastructure.Database;
+using APZMS.Infrastructure.Repositories.Interfaces;
 using Microsoft.AspNetCore.Identity;
 
 namespace APZMS.Infrastructure.Services
 {
     public class UserService: IUserService
     {
-        private readonly AppDbContext _context;
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly IUserRepository _userRepository;
 
-        public UserService(AppDbContext context, IPasswordHasher<User> passwordHasher, IUserRepository userRepository)
+        public UserService(IPasswordHasher<User> passwordHasher, IUserRepository userRepository)
         {
-            _context = context;
             _passwordHasher = passwordHasher;
             _userRepository = userRepository;
         }

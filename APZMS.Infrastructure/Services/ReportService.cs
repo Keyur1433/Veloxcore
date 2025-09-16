@@ -2,6 +2,7 @@
 using APZMS.Application.DTOs;
 using APZMS.Application.Interfaces;
 using APZMS.Domain.Exceptions;
+using APZMS.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace APZMS.Infrastructure.Services

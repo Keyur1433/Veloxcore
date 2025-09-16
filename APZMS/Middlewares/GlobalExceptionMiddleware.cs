@@ -1,4 +1,4 @@
-﻿using APZMS.Domain.Exceptions;
+using APZMS.Domain.Exceptions;
 using System.Text.Json;
 
 namespace APZMS.Middlewares
@@ -29,7 +29,9 @@ namespace APZMS.Middlewares
                 {
                     DomainException => StatusCodes.Status404NotFound,
                     KeyNotFoundException => StatusCodes.Status404NotFound,
+                    InvalidAgeRangeException  => StatusCodes.Status400BadRequest,
                     ArgumentOutOfRangeException => StatusCodes.Status400BadRequest,
+                    InvalidOperationException => StatusCodes.Status500InternalServerError,
                     _ => StatusCodes.Status500InternalServerError,
                 };
 
