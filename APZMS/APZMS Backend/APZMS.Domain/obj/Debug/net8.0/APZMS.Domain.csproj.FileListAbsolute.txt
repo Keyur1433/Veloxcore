@@ -1,0 +1,13 @@
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.AssemblyInfoInputs.cache
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.AssemblyInfo.cs
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.csproj.CoreCompileInputs.cache
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.sourcelink.json
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\bin\Debug\net8.0\APZMS.Domain.deps.json
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\bin\Debug\net8.0\APZMS.Domain.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\bin\Debug\net8.0\APZMS.Domain.pdb
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.csproj.AssemblyReference.cache
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\refint\APZMS.Domain.dll
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\APZMS.Domain.pdb
+E:\Veloxcore\Modules Code\DotNet\APZMS (CRUD with AuthR & AuthT)\APZMS.Domain\obj\Debug\net8.0\ref\APZMS.Domain.dll
