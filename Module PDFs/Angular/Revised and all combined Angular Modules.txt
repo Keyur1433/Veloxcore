@@ -1,0 +1,158 @@
+Module-2:
+Practice:
+3. Real time text rendering as output when I type into textbox.
+
+5. Bind a dropdown menu's selected value to a property in your component and display the selected value below the menu.
+
+13. Create a shipping cost calculator where a user can select the weight of a package (dropdown) and distance (slider). Use two-way data binding to display the calculated cost dynamically.
+
+Module-3:
+*ngIf, *ngFor, *ngSwitch
+[ngClass], [ngStyle]
+
+Module-4:
+Practice:
+(Reactive form)
+1. Update partially some field using the patch value.
+
+2. Basic Input Field Validation:
+Use Case: Implement a reactive form with an email field.
+Functional Flow: The email field should accept only valid email addresses.
+UI: Label: Email, Input ID: email-input, Error Message: Invalid email address, Error Control ID: email-error.
+
+3. Basic Input Field Validation: 
+Use Case: Add a required full name field with a minimum of 3 characters.
+Functional Flow: Display an error when the input is empty or less than 3 characters.
+UI: Label: Full Name, Input ID: fullname-input, Error Message: Full name must be at least 3 characters, Error Control ID: fullname-error.
+
+4. Use Case: Include a numeric-only phone number field.
+Functional Flow: Allow only numbers with 10 digits.
+UI: Label: Phone Number, Input ID: phone-input, Error Message: Phone number must be 10 digits, Error Control ID: phone-error.
+
+5. Use Case: Add a password field with a minimum of 8 characters, including a number and a special character.
+Functional Flow: Validate format and show specific messages for missing criteria.
+UI: Label: Password, Input ID: password-input, Error Message: Password must contain at least 8 characters, a number, and a special character, Error Control ID: password-error.
+
+6. Use Case: Create a confirm password field that matches the password field.
+Functional Flow: Validate password match.
+UI: Label: Confirm Password, Input ID: confirm-password-input, Error Message: Passwords do not match, Error Control ID: confirm-password-error.
+
+7. Use Case: Add a date picker for date of birth with validation for age (minimum 18 years).
+Functional Flow: Validate that the date entered corresponds to an age of 18 or older.
+UI: Label: Date of Birth, Input ID: dob-input, Error Message: You must be at least 18 years old, Error Control ID: dob-error.
+
+8. Use Case: Include a postal code field with a regex pattern.
+Functional Flow: Accept formats like 12345 or 12345-6789.
+UI: Label: Postal Code, Input ID: postal-input, Error Message: Invalid postal code format, Error Control ID: postal-error.
+
+11. Use Case: Validate a field for a specific range (e.g., age between 1 and 100).
+Functional Flow: Allow only values within the range.
+UI: Label: Age, Input ID: age-input, Error Message: Age must be between 1 and 100, Error Control ID: age-error.
+
+12. Use Case: Create an address form group with required fields (Street, City, ZIP).
+Functional Flow: Ensure all fields are validated as a group.
+UI: Inputs: street-input, city-input, zip-input, Error Message: All address fields are required, Error Control ID: address-error.
+
+17. Use Case: Add a file upload field that accepts only specific file types (e.g., .pdf or .docx).
+Functional Flow: Show an error for unsupported types.
+UI: Input ID: file-upload-input, Error Message: Only PDF and DOCX files are allowed, Error Control ID: file-error.
+
+20. Dynamic Contact Information (Phone Numbers): 
+Business Logic: The user can add multiple phone numbers. At least one phone number must be entered, and it must be a valid 10-digit number. Each phone number should be validated as the user types.
+Functional Flow: The user can click the "Add Phone Number" button to add a new phone number field. The "Remove" button should remove the corresponding phone number. Validation should trigger for each phone number when the user tries to submit the form.
+UI and Control IDs:
+Label: Contact Phone Numbers
+Field ID: phone-array
+Input ID: phone-input-{i} (where {i} is the dynamic index)
+Error Message: "Phone number must be 10 digits"
+Error Control ID: phone-error-{i}
+Add Button ID: add-phone-button
+Remove Button ID: remove-phone-button-{i}
+Submit Button ID: submit-button
+Validation: Rule: At least one phone number is required. Pattern: Only 10-digit numeric values are allowed.
+
+Module-6:
+Practice:
+2. Create a custom pipe named capitalize that capitalizes the first letter of a given string. Use it in a template to transform "hello world" to "Hello world".
+
+11. Build a pipe called mask that masks a credit card number, showing only the last 4 digits. For example, 1234567812345678 should become ************5678.
+
+12. Create a Basic Directive
+Create a directive named highlight that changes the background color of an element to yellow when it is applied.
+
+15. Accept Input Property
+Create a directive appBorder that accepts an input property for border color and applies it to the element.
+
+Assignment:
+2. Parent-to-Child Communication (@Input): 
+Use case: A parent component manages a list of products. The child component displays product details.
+Question: Implement a parent component that passes a list of products to a child component using @Input. The child displays the details of the selected product.
+
+3. Two-Way Binding:
+Use case: A user updates their profile information using a form component.
+Question: Create a form component with two-way binding to allow users to update their profile details (e.g., name, email). Reflect the changes in the parent component when the form is submitted.
+
+8. Observables: Live Search for Products:
+Use Case: Implement a live search for products that filters results as the user types in the search box, using an Observable for real-time data.
+Business Logic: Create a ProductService that returns an Observable of product data. The component subscribes to the search Observable, triggering the ProductService each time the user types a new search term. Display the filtered results dynamically.
+UI: Search Box to input the search term. Product List that updates in real-time as the search term is entered.
+Control IDs:
+Search Box:
+Search Input: searchInput
+Search Button: searchButton
+Product List:
+Product Name: productNameColumn
+Product Price: productPriceColumn
+Add to Cart Button: addToCartButton
+
+9. Observables: Fetching User Details with RxJS Operators:
+Use Case: Fetch user details from a server using Observables and RxJS operators like map and catchError to process data and handle errors.
+Business Logic: Create a UserService that returns user data from an API endpoint. Use RxJS operators like map to transform data and catchError to handle errors gracefully. Display the user data or an error message in the component.
+UI: Display the user's name, email, and other details if the fetch is successful. Show an error message if the request fails.
+Control IDs:
+User Data:
+User Name: userName
+User Email: userEmail
+User Address: userAddress
+Error Message:
+Error Message: errorMessage
+
+Module-8:
+Practice:
+2. Use Case: When a user logs in, navigate them to:
+/welcome if it's their first login.
+/dashboard for subsequent logins.
+Key Steps:
+Check a flag in local storage or an API (isFirstLogin).
+Redirect to the appropriate route based on the flag.
+
+3. Use Case: Create a route /orders with query parameters ?status=pending or ?status=completed to filter orders.
+Display orders dynamically based on the status query parameter.
+Key Steps:
+Use ActivatedRoute to read query parameters.
+Call a service to fetch filtered orders.
+
+10. Use Case: Create a route /preview/:id that displays restricted content previews for specific users.
+Ensure only users with valid access tokens can view the preview.
+Key Steps:
+Implement a route guard that validates tokens.
+Redirect unauthorized users to /login.
+
+Module-11:
+Practice:
+1. Understanding forRoot and forChild in Angular Routing:
+Imagine you are developing a multi-module Angular application for an online bookstore. You have two main modules: BooksModule and UsersModule.
+Your task is to set up routing for these modules using the forRoot and forChild methods.
+Create a routing configuration where:
+The AppRoutingModule uses forRoot to define the main routes for the application.
+The BooksModule uses forChild to define routes specific to book-related components.
+The UsersModule also uses forChild for user-related components.
+Ensure that the main application can navigate to the books and users sections seamlessly.
+
+4. Guarding Routes with forChild:
+In your online bookstore application, you want to protect certain routes in the UsersModule to ensure that only authenticated users can access them.
+Your task is to implement route guards using the forChild method.
+The UsersRoutingModule should:
+Define routes for user profile and order history, which should be protected by an AuthGuard.
+Use the forChild method to set up the routes, ensuring that the guard is applied correctly.
+Provide the implementation details for the AuthGuard and how it integrates with the routing configuration.

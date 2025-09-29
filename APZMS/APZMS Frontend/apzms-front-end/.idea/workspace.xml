@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/models/booking.models.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/services/activity/activity.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/services/activity/activity.ts" beforeDir="false" />
@@ -92,7 +93,7 @@
       <workItem from="1758538839305" duration="4411000" />
       <workItem from="1758706740349" duration="4417000" />
       <workItem from="1758791797492" duration="5040000" />
-      <workItem from="1758875809916" duration="2270000" />
+      <workItem from="1758875809916" duration="2866000" />
     </task>
     <servers />
   </component>
@@ -114,7 +115,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/components/activities/activity-dashboard/activity-dashboard.component.ts</url>
-          <line>32</line>
+          <line>33</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>

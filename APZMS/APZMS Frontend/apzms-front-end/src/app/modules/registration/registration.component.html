@@ -1,0 +1,61 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()"
+  class="max-w-md mx-auto mt-10 p-8 bg-white rounded-lg shadow-xl">
+  <div class="mb-6">
+    <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name:</label>
+    <input id="name" type="text" formControlName="name"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <div class="error-messages text-red-600 text-sm mt-1">
+      <div *ngIf="getFieldError('name', 'required')">Name is required</div>
+      <div *ngIf="getFieldError('name', 'minlength')">Name must be at least 2 characters</div>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email:</label>
+    <input id="email" type="email" formControlName="email"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <div class="error-messages text-red-600 text-sm mt-1">
+      <div *ngIf="getFieldError('email', 'required')">Email is required</div>
+      <div *ngIf="getFieldError('email', 'email')">Please enter a valid email</div>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone:</label>
+    <input id="phone" type="tel" formControlName="phone"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <div class="error-messages text-red-600 text-sm mt-1">
+      <div *ngIf="getFieldError('phone', 'required')">Phone is required</div>
+      <div *ngIf="getFieldError('phone', 'pattern')">Please enter a valid phone number</div>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password:</label>
+    <input id="password" type="password" formControlName="password"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <div class="error-messages text-red-600 text-sm mt-1">
+      <div *ngIf="getFieldError('password', 'required')">Password is required</div>
+      <div *ngIf="getFieldError('password', 'minlength')">Password must be at least 8 characters</div>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <label for="birthDate" class="block mb-2 text-sm font-medium text-gray-900">Birth Date:</label>
+    <input id="birthDate" type="date" formControlName="birthDate"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+    <div class="error-messages text-red-600 text-sm mt-1">
+      <div *ngIf="getFieldError('birthDate', 'required')">Birth date is required</div>
+    </div>
+  </div>
+
+  <div *ngIf="apiError" class="api-error bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6"
+    role="alert">
+    {{ apiError }}
+  </div>
+
+  <button type="submit" [disabled]="registrationForm.invalid || isSubmitting"
+    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:bg-gray-400 disabled:cursor-not-allowed">
+    {{ isSubmitting ? 'Registering...' : 'Register' }}
+  </button>
+</form>

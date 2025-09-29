@@ -1,0 +1,51 @@
+<div class="max-w-2xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+  <ng-container *ngIf="booking$ | async as booking; else loadingError">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b pb-4">
+      Booking Details for #{{ booking.bookingId }}
+    </h2>
+
+    <div class="booking-info bg-gray-50 p-6 rounded-md space-y-4">
+      <p class="text-lg text-gray-700">
+        <strong>Customer:</strong> {{ booking.customerName }}
+      </p>
+      <p class="text-lg text-gray-700">
+        <strong>Activity:</strong> {{ booking.activityName }}
+      </p>
+      <p class="text-lg text-gray-700">
+        <strong>Age Group:</strong> {{ booking.ageGroup }}
+      </p>
+      <p class="text-lg text-gray-700">
+        <strong>Final Price:</strong> {{ booking.finalPrice | currency }}
+      </p>
+      <p class="text-lg text-gray-700">
+        <strong>Time Slot Type:</strong> {{ booking.timeSlotType }}
+      </p>
+    </div>
+
+    <button (click)="goBack()"
+      class="mt-8 w-full inline-flex items-center justify-center px-6 py-3 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+      Back to Bookings
+    </button>
+  </ng-container>
+
+  <!-- Template shown while loading or on error -->
+  <ng-template #loadingError>
+    <div *ngIf="error; else loading" class="text-center p-6">
+      <p class="mb-4 p-4 text-red-600 bg-red-100 border border-red-400 rounded-md">
+        {{ error }}
+      </p>
+      <button (click)="goBack()"
+        class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors">
+        Go Back
+      </button>
+    </div>
+
+    <ng-template #loading>
+      <div class="flex justify-center items-center p-10">
+        <p class="text-lg font-semibold text-gray-600 animate-pulse">
+          Loading booking details…
+        </p>
+      </div>
+    </ng-template>
+  </ng-template>
+</div>

@@ -1,0 +1,51 @@
+<div *ngIf="isOpen" class="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
+  <div (click)="$event.stopPropagation()" class="bg-white max-w-lg w-full rounded-lg shadow-xl overflow-hidden">
+    <div class="p-6">
+      <form [formGroup]="addBookingForm" (ngSubmit)="onSubmit()" class="mt-4 space-y-4">
+        <div>
+          <label for="bookingDate" class="block text-sm font-medium text-gray-700">Date</label>
+          <input id="bookingDate" type="date" formControlName="bookingDate"
+            class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+          <div *ngIf="getFieldError('bookingDate', 'required')" class="mt-1 text-sm text-red-600">
+            Booking date is required
+          </div>
+          <div *ngIf="getFieldError('bookingDate', 'futureDate')" class="mt-1 text-sm text-red-600">
+            Booking date must be in the future
+          </div>
+        </div>
+        <div>
+          <label for="timeSlot" class="block text-sm font-medium text-gray-700">Time Slot</label>
+          <input id="timeSlot" placeholder="HH:mm" formControlName="timeSlot"
+            class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+          <div *ngIf="getFieldError('timeSlot', 'required')" class="mt-1 text-sm text-red-600">
+            Valid time slot required
+          </div>
+        </div>
+        <div>
+          <label for="participants" class="block text-sm font-medium text-gray-700">Participants</label>
+          <input id="participants" type="number" formControlName="participants"
+            class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+          <div *ngIf="getFieldError('participants', 'required')" class="mt-1 text-sm text-red-600">
+            Participants required
+          </div>
+        </div>
+        <div class="flex space-x-3 pt-2">
+          <button type="button" (click)="closeModal()"
+            class="flex-1 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Cancel
+          </button>
+          <button type="submit" [disabled]="addBookingForm.invalid || isSubmitting"
+            class="flex-1 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-indigo-300 disabled:cursor-not-allowed">
+            {{ isSubmitting ? "Adding..." : "Add Booking" }}
+          </button>
+        </div>
+
+        <!-- Error Message -->
+        <div *ngIf="errorMessage" class="mt-3 py-2 px-3 bg-red-100 border border-red-400 text-red-700 text-sm rounded">
+          {{ errorMessage }}
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

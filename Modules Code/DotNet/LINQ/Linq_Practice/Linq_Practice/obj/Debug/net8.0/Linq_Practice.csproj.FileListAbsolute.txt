@@ -1,0 +1,14 @@
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\bin\Debug\net8.0\Linq_Practice.exe
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\bin\Debug\net8.0\Linq_Practice.deps.json
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\bin\Debug\net8.0\Linq_Practice.runtimeconfig.json
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\bin\Debug\net8.0\Linq_Practice.dll
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\bin\Debug\net8.0\Linq_Practice.pdb
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\Linq_Practice.GeneratedMSBuildEditorConfig.editorconfig
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\Linq_Practice.AssemblyInfoInputs.cache
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\Linq_Practice.AssemblyInfo.cs
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\Linq_Practice.csproj.CoreCompileInputs.cache
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\Linq_Practice.dll
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\refint\Linq_Practice.dll
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\Linq_Practice.pdb
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\Linq_Practice.genruntimeconfig.cache
+E:\Veloxcore\Modules Code\DotNet\LINQ\Linq_Practice\Linq_Practice\obj\Debug\net8.0\ref\Linq_Practice.dll

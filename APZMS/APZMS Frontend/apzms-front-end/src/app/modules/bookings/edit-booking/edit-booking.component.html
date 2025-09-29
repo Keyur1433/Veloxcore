@@ -1,0 +1,100 @@
+<div class="p-6">
+  <h1 class="text-2xl font-bold mb-6">Edit Booking</h1>
+
+  <div *ngIf="loading" class="text-center text-gray-500 mb-4">Loading booking details...</div>
+
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="bg-white rounded-lg shadow p-6" *ngIf="!loading">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label for="customerId" class="block text-sm font-medium text-gray-700 mb-2">Customer ID</label>
+        <input id="customerId" type="text" formControlName="customerId"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          [class.border-red-300]="submitted && editForm.get('customerId')?.invalid" />
+        <div *ngIf="submitted && editForm.get('customerId')?.invalid" class="text-red-500 text-sm mt-1">
+          Customer ID is required.
+        </div>
+      </div>
+
+      <div>
+        <label for="activityId" class="block text-sm font-medium text-gray-700 mb-2">Activity ID</label>
+        <input id="activityId" type="text" formControlName="activityId"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          [class.border-red-300]="submitted && editForm.get('activityId')?.invalid" />
+        <div *ngIf="submitted && editForm.get('activityId')?.invalid" class="text-red-500 text-sm mt-1">
+          Activity ID is required.
+        </div>
+      </div>
+
+      <div>
+        <label for="bookingDate" class="block text-sm font-medium text-gray-700 mb-2">Booking Date</label>
+        <input id="bookingDate" type="date" formControlName="bookingDate"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          [class.border-red-300]="submitted && editForm.get('bookingDate')?.invalid" />
+        <div *ngIf="submitted && editForm.get('bookingDate')?.invalid" class="text-red-500 text-sm mt-1">
+          Booking date is required.
+        </div>
+      </div>
+
+      <div>
+        <label for="participants" class="block text-sm font-medium text-gray-700 mb-2">Participants</label>
+        <input id="participants" type="number" formControlName="participants"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          [class.border-red-300]="submitted && editForm.get('participants')?.invalid" />
+        <div *ngIf="submitted && editForm.get('participants')?.invalid" class="text-red-500 text-sm mt-1">
+          Number of participants must be at least 1.
+        </div>
+      </div>
+
+      <div>
+        <label for="timeSlot" class="block text-sm font-medium text-gray-700 mb-2">Time Slot</label>
+        <select id="timeSlot" formControlName="timeSlot"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          [class.border-red-300]="submitted && editForm.get('timeSlot')?.invalid">
+          <option value="morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="evening">Evening</option>
+        </select>
+        <div *ngIf="submitted && editForm.get('timeSlot')?.invalid" class="text-red-500 text-sm mt-1">
+          Time slot is required.
+        </div>
+      </div>
+
+      <div>
+        <label for="status" class="block text-sm font-medium text-gray-700 mb-2">Status</label>
+        <select id="status" formControlName="status"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+          <option value="pending">Pending</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="flex space-x-4 mt-8 justify-end">
+      <button type="button" (click)="onCancel()" 
+        class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+        [disabled]="loading">
+        Cancel
+      </button>
+      <button type="submit"
+        class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        [disabled]="loading || editForm.invalid">
+        <span *ngIf="loading" class="flex items-center">
+          <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Updating...
+        </span>
+        <span *ngIf="!loading">Update Booking</span>
+      </button>
+    </div>
+  </form>
+
+  <div *ngIf="booking && !loading" class="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-md">
+    <h3 class="text-sm font-medium text-blue-800 mb-2">Current Booking Info</h3>
+    <p class="text-sm text-blue-700">Customer: {{ booking.customerName }}</p>
+    <p class="text-sm text-blue-700">Activity: {{ booking.activityName }}</p>
+    <p class="text-sm text-blue-700">Final Price: ${{ booking.finalPrice }}</p>
+  </div>
+</div>

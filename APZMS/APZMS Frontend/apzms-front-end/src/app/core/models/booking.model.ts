@@ -8,11 +8,16 @@ export interface BookingDto {
 
 export interface BookingResponseDto {
     bookingId: number;
+    id: number; // Alias for bookingId if needed
     activityId: number;
     activityName: string;
     customerId: number;
     customerName: string;
     finalPrice: number;
+    bookingDate: string;
+    timeSlot: string;
+    participants: number;
+    status: string;
     timeSlotType?: string | null;
     ageGroup?: string | null;
     message?: string | null;
@@ -41,4 +46,14 @@ export interface BookingUpdateDto {
     activityId: number
     bookingDate: string
     participants: number
+}
+
+export interface BookingRequestDto {
+    id: number;
+    customerId: number;
+    activityId: number;
+    bookingDate: string;
+    participants: number;
+    timeSlot: string;
+    status: string;
 }
