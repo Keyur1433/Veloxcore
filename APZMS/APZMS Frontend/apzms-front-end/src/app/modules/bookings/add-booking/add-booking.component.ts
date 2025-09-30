@@ -1,5 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef, ViewChild, OnDestroy } from '@angular/core';
-import { FormGroup, AbstractControl, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit, ViewChild, OnDestroy, AfterViewInit, signal } from '@angular/core'; // Removed ChangeDetectorRef
+import { FormGroup, AbstractControl } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
 import { ActivityResponseDto } from '../../../core/models/activity.model';
@@ -12,61 +12,62 @@ import { AddBookingFormOverlayComponent } from '../add-booking-form-overlay/add-
 @Component({
   selector: 'app-add-booking',
   standalone: false,
-  // imports: [ReactiveFormsModule, NgForOf, CurrencyPipe, AddBookingFormOverlayComponent],
   templateUrl: './add-booking.component.html',
   styleUrls: ['./add-booking.component.css']
 })
 
-export class AddBookingComponent implements OnInit, OnDestroy {
+export class AddBookingComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(AddBookingFormOverlayComponent) overlay!: AddBookingFormOverlayComponent
 
   addBookingForm!: FormGroup
-  isSubmitting: boolean = false
-  isActivitiesLoading: boolean = false
+  isSubmitting = signal(false)
+  isActivitiesLoading = signal(false)
   formData!: BookingDto
-  activities: ActivityResponseDto[] = []
-  isModalOpen: boolean = false
+  activities = signal<ActivityResponseDto[]>([]) 
+  isModalOpen = signal(false) 
 
   private destroy$ = new Subject<void>()
 
-  constructor(private bookingService: BookingService,
+  constructor(
+    private bookingService: BookingService,
     private router: Router,
     private activityService: ActivityService,
-    private auth: AuthService,
-    private cdr: ChangeDetectorRef,
+    private auth: AuthService
   ) { }
 
   ngOnInit() {
     this.formData = {} as BookingDto;
-    this.loadAllActivities()
+  }
+
+  ngAfterViewInit() {
+    this.loadAllActivities();
   }
 
   openModal(): void {
-    this.isModalOpen = true;
+    this.isModalOpen.set(true);
   }
 
   closeModal(): void {
-    this.isModalOpen = false;
+    this.isModalOpen.set(false);
   }
 
   private loadAllActivities() {
-    this.isActivitiesLoading = true
+    this.isActivitiesLoading.set(true)
 
     this.activityService.getActivities()
     .pipe(takeUntil(this.destroy$))
     .subscribe({
       next: (activityData) => {
-        this.isActivitiesLoading = false
+        this.isActivitiesLoading.set(false)
 
         this.overlay.handleSubmissionResponse(true)
 
-        this.activities = activityData;
-        this.cdr.detectChanges();
+        this.activities.set(activityData);
 
         console.log('ACTIVITY DATA FROM BACKEND: ', activityData);
       },
       error: (err) => {
-        this.isActivitiesLoading = false
+        this.isActivitiesLoading.set(false)
         this.overlay.handleSubmissionResponse(false, 'Failed to add activity. Please try again.')
 
         console.error('ERROR WHILE LOADING ACTIVITIES', err);
@@ -84,20 +85,20 @@ export class AddBookingComponent implements OnInit, OnDestroy {
     Object.assign(this.formData, overlayBookingFormData);
 
     this.formData.customerId = Number(this.auth.loadUserFromStorage()?.id);
-    this.isSubmitting = true
+    this.isSubmitting.set(true)
 
     this.bookingService.addBooking(this.formData)
     .pipe(takeUntil(this.destroy$))
     .subscribe({
       next: (data) => {
         console.log('DATA FROM BACKEND: ', data);
-        this.isSubmitting = false
+        this.isSubmitting.set(false)
         alert("Booking added successfully, redirecting to booking dashboard")
         this.router.navigate(['/bookings', data.bookingId])
       },
       error: (err) => {
         console.error('ERROR WHILE BOOKING: ', err);
-        this.isSubmitting = false;
+        this.isSubmitting.set(false)
       }
     })
   }

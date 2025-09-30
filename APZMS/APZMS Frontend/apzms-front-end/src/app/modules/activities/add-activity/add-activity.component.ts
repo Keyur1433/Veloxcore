@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { ActivityService } from '../../../core/services/activity/activity.service';
@@ -19,7 +19,7 @@ export class AddActivityComponent implements OnInit, OnDestroy {
 
   private destroy$ = new Subject<void>()
 
-  constructor(private activityService: ActivityService, private cdr: ChangeDetectorRef) { }
+  constructor(private activityService: ActivityService) { }
 
   ngOnInit() {
     this.activityForm = this.createActivityForm();

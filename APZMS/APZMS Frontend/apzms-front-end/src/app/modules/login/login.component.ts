@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, signal } from '@angular/core';
 import { AuthService } from '../../core/services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -13,56 +13,85 @@ import { Subject, takeUntil } from 'rxjs';
 
 export class LoginComponent implements OnDestroy {
   loginForm!: FormGroup;
-  loading = false;
-  error: string | null = null;
+  loading = signal(false);
+  error = signal<string | null>(null);
   returnUrl: string = '/dashboard';
-  isSubmitting!: boolean
 
-  private destroy$ = new Subject<void>()
+  private destroy$ = new Subject<void>();
 
   constructor(
     private auth: AuthService,
     private router: Router,
-    private route: ActivatedRoute,
-    private cdr: ChangeDetectorRef
+    private route: ActivatedRoute
   ) {
     this.loginForm = new FormGroup({
-      email: new FormControl("", [Validators.required, Validators.email]),
-      password: new FormControl("", [Validators.required]),
-    })
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required]),
+    });
 
-    // read returnUrl if set by guard
-    const q = route.snapshot.queryParams['returnUrl']
-    if (q) this.returnUrl = q
+    // Read returnUrl if set by guard
+    const q = route.snapshot.queryParams['returnUrl'];
+    if (q) this.returnUrl = q;
   }
 
   onSubmit() {
-    if (this.loginForm.invalid) return
-    this.loading = true
-    this.error = null
+    if (this.loginForm.invalid) return;
+    this.loading.set(true);
+    this.error.set(null);
 
     this.auth.login(this.loginForm.value)
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: () => {
           // After successful login navigate to returnUrl
-          this.router.navigateByUrl(this.returnUrl)
+          this.router.navigateByUrl(this.returnUrl);
         },
         error: (err) => {
           // Map server-side 400/401 into friendly messages here
-          this.error = (err?.error?.errorMessage) || 'Login failed. Check credentials.';
-          this.loading = false;
-          this.cdr.detectChanges(); // If the creds are wrong, then it manually tells Angular: “Hey, something changed -- here something is changed means that creds are wrong, so please update the view to show error message”
+          this.error.set(err?.error?.errorMessage || 'Login failed. Check credentials.');
+          this.loading.set(false);
         }
-      })
+      });
   }
 
   get email() {
-    return this.loginForm.get('email')?.touched && this.loginForm.get('email')?.invalid
+    return this.loginForm.get('email')?.touched && this.loginForm.get('email')?.invalid;
   }
 
   ngOnDestroy(): void {
-    this.destroy$.next()
-    this.destroy$.complete()
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
+  // Animated border states
+  emailFocused = false;
+  emailBlurred = false;
+  passwordFocused = false;
+  passwordBlurred = false;
+
+  onEmailFocus() {
+    this.emailBlurred = false;
+    this.emailFocused = true;
+  }
+
+  onEmailBlur() {
+    this.emailFocused = false;
+    this.emailBlurred = true;
+    setTimeout(() => {
+      this.emailBlurred = false;
+    }, 600);
+  }
+
+  onPasswordFocus() {
+    this.passwordBlurred = false;
+    this.passwordFocused = true;
+  }
+
+  onPasswordBlur() {
+    this.passwordFocused = false;
+    this.passwordBlurred = true;
+    setTimeout(() => {
+      this.passwordBlurred = false;
+    }, 600);
   }
 }
