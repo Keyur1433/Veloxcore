@@ -23,8 +23,8 @@ export class AddBookingComponent implements OnInit, OnDestroy, AfterViewInit {
   isSubmitting = signal(false)
   isActivitiesLoading = signal(false)
   formData!: BookingDto
-  activities = signal<ActivityResponseDto[]>([]) 
-  isModalOpen = signal(false) 
+  activities = signal<ActivityResponseDto[]>([])
+  isModalOpen = signal(false)
 
   private destroy$ = new Subject<void>()
 
@@ -55,24 +55,24 @@ export class AddBookingComponent implements OnInit, OnDestroy, AfterViewInit {
     this.isActivitiesLoading.set(true)
 
     this.activityService.getActivities()
-    .pipe(takeUntil(this.destroy$))
-    .subscribe({
-      next: (activityData) => {
-        this.isActivitiesLoading.set(false)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: (activityData) => {
+          this.isActivitiesLoading.set(false)
 
-        this.overlay.handleSubmissionResponse(true)
+          this.overlay.handleSubmissionResponse(true)
 
-        this.activities.set(activityData);
+          this.activities.set(activityData);
 
-        console.log('ACTIVITY DATA FROM BACKEND: ', activityData);
-      },
-      error: (err) => {
-        this.isActivitiesLoading.set(false)
-        this.overlay.handleSubmissionResponse(false, 'Failed to add activity. Please try again.')
+          console.log('ACTIVITY DATA FROM BACKEND: ', activityData);
+        },
+        error: (err) => {
+          this.isActivitiesLoading.set(false)
+          this.overlay.handleSubmissionResponse(false, 'Failed to add activity. Please try again.')
 
-        console.error('ERROR WHILE LOADING ACTIVITIES', err);
-      }
-    })
+          console.error('ERROR WHILE LOADING ACTIVITIES', err);
+        }
+      })
   }
 
   setActivityId(id: number): void {
@@ -88,19 +88,19 @@ export class AddBookingComponent implements OnInit, OnDestroy, AfterViewInit {
     this.isSubmitting.set(true)
 
     this.bookingService.addBooking(this.formData)
-    .pipe(takeUntil(this.destroy$))
-    .subscribe({
-      next: (data) => {
-        console.log('DATA FROM BACKEND: ', data);
-        this.isSubmitting.set(false)
-        alert("Booking added successfully, redirecting to booking dashboard")
-        this.router.navigate(['/bookings', data.bookingId])
-      },
-      error: (err) => {
-        console.error('ERROR WHILE BOOKING: ', err);
-        this.isSubmitting.set(false)
-      }
-    })
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: (data) => {
+          console.log('DATA FROM BACKEND: ', data);
+          this.isSubmitting.set(false)
+          alert("Booking added successfully, redirecting to booking dashboard")
+          this.router.navigate(['/bookings', data.bookingId])
+        },
+        error: (err) => {
+          console.error('ERROR WHILE BOOKING: ', err);
+          this.isSubmitting.set(false)
+        }
+      })
   }
 
   // Custom validator to check for future date

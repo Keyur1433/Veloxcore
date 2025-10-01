@@ -57,3 +57,11 @@ export interface BookingRequestDto {
     timeSlot: string;
     status: string;
 }
+
+export interface PaginatedBookings {
+  data: BookingFilteredItemResponseDto[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages?: number;
+}

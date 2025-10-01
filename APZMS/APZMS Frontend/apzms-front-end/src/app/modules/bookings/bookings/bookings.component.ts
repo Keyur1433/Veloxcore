@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subject, switchMap, takeUntil } from 'rxjs';
@@ -12,15 +12,18 @@ import { BookingService } from '../../../core/services/booking/booking-service';
   styleUrls: ['./bookings.component.css'],
 })
 
-export class BookingsComponent implements OnDestroy {
+export class BookingsComponent implements OnInit, OnDestroy {
   error: string = ""
   filterForm!: FormGroup
-  isLoading!: boolean
+  pageSize!: number
+  pageIndex!: number
+  pageSizeArr: number[] = [5, 10, 15, 20]
 
   bookings$!: Observable<BookingFilteredItemResponseDto[]>
   private filterSubject = new BehaviorSubject<any>({})
 
   filters$ = this.filterSubject.asObservable()
+
   private destroy$ = new Subject<void>()
 
   constructor(
@@ -34,13 +37,47 @@ export class BookingsComponent implements OnDestroy {
     )
   }
 
+  ngOnInit(): void {
+    this.pageSize = 5
+    this.pageIndex = 1
+    this.filterForm.get('pageSize')?.setValue(5)
+    this.filterForm.get('pageNumber')?.setValue(1)
+
+    this.filterForm.get('pageSize')?.valueChanges.pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(() => {
+      this.filterForm.get('pageNumber')?.setValue(1);
+      this.onFilter();
+    });
+
+    this.onFilter();
+  }
+
   createFilterForm(): FormGroup {
     return new FormGroup({
       customerName: new FormControl(""),
       activityName: new FormControl(""),
       BookingDateFrom: new FormControl(""),
       BookingDateTo: new FormControl(""),
+      pageNumber: new FormControl(1),
+      pageSize: new FormControl(5),
     })
+  }
+
+  nextPage() {
+    if (this.filterForm.get('pageNumber')?.value >= 1) {
+      this.pageIndex = this.filterForm.get('pageNumber')?.value + 1
+      this.filterForm.get('pageNumber')?.setValue(this.pageIndex)
+      this.filterSubject.next(this.filterForm.value)
+    }
+  }
+
+  prevPage() {
+    if (this.filterForm.get('pageNumber')?.value > 1) {
+      this.pageIndex = Math.max(1, this.filterForm.get('pageNumber')?.value - 1)
+      this.filterForm.get('pageNumber')?.setValue(this.pageIndex)
+      this.filterSubject.next(this.filterForm.value)
+    }
   }
 
   onFilter() {
@@ -55,7 +92,7 @@ export class BookingsComponent implements OnDestroy {
       .subscribe({
         next: () => {
           alert("Booking deleted successfully")
-          this.filterSubject.next(this.filterSubject.value)
+          this.filterSubject.next({ ...this.filterSubject.value, pageNumber: this.pageIndex })
         },
         error: (err) => {
           console.error('ERROR: ', err);

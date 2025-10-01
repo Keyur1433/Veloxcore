@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddBookingFormOverlayComponent } from './add-booking-form-overlay/add-booking-form-overlay.component';
 import { ViewBookingComponent } from './view-booking/view-booking.component';
 import { BookingsRoutingModule } from './bookings-routing.module';
@@ -20,6 +20,7 @@ import { EditBookingComponent } from './edit-booking/edit-booking.component';
     CommonModule,
     ReactiveFormsModule,
     BookingsRoutingModule,
+    FormsModule
   ]
 })
 export class BookingsModule { }
