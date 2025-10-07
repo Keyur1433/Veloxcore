@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ActivitiesRoutingModule } from './activities-routing.module';
 import { ActivityDashboardComponent } from './activity-dashboard/activity-dashboard.component';
 import { AddActivityComponent } from './add-activity/add-activity.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AddActivityComponent } from './add-activity/add-activity.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    ActivitiesRoutingModule
+    ActivitiesRoutingModule,
+    AgGridModule
   ],
   exports: [
     ActivityDashboardComponent,

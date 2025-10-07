@@ -15,7 +15,7 @@
         <strong>Age Group:</strong> {{ booking.ageGroup }}
       </p>
       <p class="text-lg text-gray-700">
-        <strong>Final Price:</strong> {{ booking.finalPrice | currency }}
+        <strong>Final Price:</strong> {{ booking?.finalPrice | currency }}
       </p>
       <p class="text-lg text-gray-700">
         <strong>Time Slot Type:</strong> {{ booking.timeSlotType }}

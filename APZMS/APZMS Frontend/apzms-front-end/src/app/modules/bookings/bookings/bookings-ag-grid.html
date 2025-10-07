@@ -1,0 +1,12 @@
+<ag-grid-angular 
+    class="ag-theme-alpine"
+    [rowData]="bookings$ | async"
+    [columnDefs]="colDefs"
+    [pagination]="true"
+    [paginationPageSize]="5"
+    [paginationPageSizeSelector]="[5, 10, 20, 50]"
+    [suppressHorizontalScroll]="false"
+    [domLayout]="'autoHeight'"
+    [defaultColDef]="defaultColDef">
+>
+</ag-grid-angular>

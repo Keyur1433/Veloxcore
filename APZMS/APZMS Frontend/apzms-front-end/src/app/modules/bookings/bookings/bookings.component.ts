@@ -1,23 +1,25 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, Subject, switchMap, takeUntil } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, switchMap, takeUntil, tap } from 'rxjs';
 import { BookingFilteredItemResponseDto } from '../../../core/models/booking.model';
 import { BookingService } from '../../../core/services/booking/booking-service';
+import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'app-bookings',
   standalone: false,
-  templateUrl: './bookings.component.html',
+  templateUrl: './bookings-ag-grid.html',
+  // templateUrl: './bookings.component.html',
   styleUrls: ['./bookings.component.css'],
+  encapsulation: ViewEncapsulation.None // Disable view encapsulation to enable global style overrides
 })
-
 export class BookingsComponent implements OnInit, OnDestroy {
-  error: string = ""
-  filterForm!: FormGroup
-  pageSize!: number
-  pageIndex!: number
-  pageSizeArr: number[] = [5, 10, 15, 20]
+  error: string = "";
+  filterForm!: FormGroup;
+  pageSize: number = 5;
+  pageIndex: number = 1;
+  pageSizeArr: number[] = [5, 10, 15, 20];
 
   bookings$!: Observable<BookingFilteredItemResponseDto[]>
   private filterSubject = new BehaviorSubject<any>({})
@@ -33,16 +35,15 @@ export class BookingsComponent implements OnInit, OnDestroy {
     this.filterForm = this.createFilterForm()
 
     this.bookings$ = this.filters$.pipe(
-      switchMap(filters => bookingService.getFilteredBookings(filters))
+      switchMap(filters => bookingService.getFilteredBookings(filters)),
+
+      tap(bookings => {
+        // debugger
+        console.log(bookings)
+      })
     )
   }
-
   ngOnInit(): void {
-    this.pageSize = 5
-    this.pageIndex = 1
-    this.filterForm.get('pageSize')?.setValue(5)
-    this.filterForm.get('pageNumber')?.setValue(1)
-
     this.filterForm.get('pageSize')?.valueChanges.pipe(
       takeUntil(this.destroy$)
     ).subscribe(() => {
@@ -60,7 +61,8 @@ export class BookingsComponent implements OnInit, OnDestroy {
       BookingDateFrom: new FormControl(""),
       BookingDateTo: new FormControl(""),
       pageNumber: new FormControl(1),
-      pageSize: new FormControl(5),
+      // pageSize: new FormControl(5),
+      pageSize: new FormControl(),
     })
   }
 
@@ -106,6 +108,85 @@ export class BookingsComponent implements OnInit, OnDestroy {
 
   redirectToEdit(id: number) {
     this.router.navigate(['/bookings', id, 'edit'])
+  }
+
+  colDefs: ColDef[] = [
+    {
+      field: "id",
+      headerName: "ID",
+      width: 70,
+      sortable: true,
+      filter: 'agNumberColumnFilter'
+    },
+    {
+      field: "activityId",
+      headerName: "Activity ID",
+      width: 120,
+      sortable: true,
+      filter: 'agNumberColumnFilter'
+    },
+    {
+      field: "activityName",
+      headerName: "Activity Name",
+      width: 150,
+      sortable: true,
+      filter: 'agTextColumnFilter'
+    },
+    {
+      field: "customerId",
+      headerName: "Customer ID",
+      width: 140,
+      sortable: true,
+      filter: 'agNumberColumnFilter'
+    },
+    {
+      field: "customerName",
+      headerName: "Customer Name",
+      width: 160,
+      sortable: true,
+      filter: 'agTextColumnFilter'
+    },
+    {
+      field: "price",
+      headerName: "Price",
+      width: 100,
+      sortable: true,
+      filter: 'agNumberColumnFilter'
+    },
+    {
+      field: "finalPrice",
+      headerName: "Final Price",
+      width: 130,
+      sortable: true,
+      filter: 'agNumberColumnFilter'
+    },
+    {
+      field: "bookingDate",
+      headerName: "Booking Date",
+      width: 150,
+      sortable: true,
+      // filter: 'agNumberColumnFilter'
+    },
+    {
+      field: "timeSlot",
+      headerName: "Time Slot",
+      width: 150,
+      sortable: true,
+      filter: 'agTextColumnFilter'
+    },
+    {
+      field: "participants",
+      headerName: "Participants",
+      width: 130,
+      sortable: true,
+      filter: 'agNumberColumnFilter'
+    }
+  ]
+
+  defaultColDef = {
+    resizable: true,
+    sortable: true,
+    filter: true,
   }
 
   ngOnDestroy(): void {

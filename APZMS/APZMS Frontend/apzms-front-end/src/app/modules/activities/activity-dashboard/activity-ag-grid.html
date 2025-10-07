@@ -1,0 +1,14 @@
+<h1 class="text-2xl font-bold mb-4">Activity Dashboard</h1>
+
+<!-- AG Grid Component -->
+<ag-grid-angular 
+  class="ag-theme-alpine"
+  [rowData]="activities$ | async" 
+  [columnDefs]="colDefs"
+  [pagination]="true"
+  [paginationPageSize]="5"
+  [paginationPageSizeSelector]="[5, 10, 20, 50]"
+  [suppressHorizontalScroll]="true"
+  [domLayout]="'autoHeight'"
+  [defaultColDef]="defaultColDef">
+</ag-grid-angular>

@@ -1,0 +1,7 @@
+@if (bookings$ | async; as bookings) {
+  <highcharts-chart 
+    [Highcharts]="highCharts" 
+    [options]="bookings">
+    style="width: 100%; height: 400px; display: block;"
+  </highcharts-chart>
+}

@@ -1,1 +1,5 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+.ag-paging-panel {
+  justify-content: flex-start;
+}

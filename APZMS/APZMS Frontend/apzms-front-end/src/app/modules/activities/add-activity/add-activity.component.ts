@@ -9,7 +9,6 @@ import { ActivityService } from '../../../core/services/activity/activity.servic
   templateUrl: './add-activity.component.html',
   styleUrls: ['./add-activity.component.css']
 })
-
 export class AddActivityComponent implements OnInit, OnDestroy {
   activityForm!: FormGroup;
   selectedFile: File | null = null

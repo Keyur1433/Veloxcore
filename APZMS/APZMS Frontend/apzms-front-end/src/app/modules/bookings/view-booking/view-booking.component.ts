@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { BookingResponseDto } from '../../../core/models/booking.model';
 import { BookingService } from '../../../core/services/booking/booking-service';
+import { CurrencyPipe } from '@angular/common';
 // import { BookingResponseDto } from '../../core/models/booking/booking-response-dto.model';
 
 @Component({

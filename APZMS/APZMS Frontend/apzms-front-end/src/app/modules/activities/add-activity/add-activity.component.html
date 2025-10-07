@@ -107,9 +107,11 @@
           </label>
           <input id="photo" type="file" accept=".jpg,.jpeg,.png" (change)="onFileSelected($event)" class="hidden" />
         </div>
-        <div *ngIf="getFieldError('photo', 'required')" class="text-red-500 text-sm mt-2">
+        @if (getFieldError('photo', 'required')) {
+        <div class="text-red-500 text-sm mt-2">
           Photo is required.
         </div>
+        }
       </div>
 
       <!-- Show selected file name -->
