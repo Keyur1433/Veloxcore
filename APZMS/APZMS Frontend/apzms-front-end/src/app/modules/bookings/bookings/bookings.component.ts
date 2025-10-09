@@ -35,6 +35,7 @@ export class BookingsComponent implements OnInit, OnDestroy {
     this.filterForm = this.createFilterForm()
 
     this.bookings$ = this.filters$.pipe(
+      
       switchMap(filters => bookingService.getFilteredBookings(filters)),
 
       tap(bookings => {
@@ -185,8 +186,8 @@ export class BookingsComponent implements OnInit, OnDestroy {
 
   defaultColDef = {
     resizable: true,
-    sortable: true,
-    filter: true,
+    // sortable: false,
+    // filter: false,
   }
 
   ngOnDestroy(): void {

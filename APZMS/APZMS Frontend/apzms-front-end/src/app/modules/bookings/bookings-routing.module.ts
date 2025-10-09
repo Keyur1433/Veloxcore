@@ -10,7 +10,7 @@ import { BookingPieChartComponent } from './charts/booking-pie-chart/booking-pie
 
 const routes: Routes = [
   { path: '', component: BookingsComponent },
-  { path: 'bookingChart', component: BookingsBarChartsComponent },
+  { path: 'bookingBarChart', component: BookingsBarChartsComponent },
   { path: 'bookingLineChart', component: BookingLineChartComponent },
   { path: 'bookingPieChart', component: BookingPieChartComponent },
   { path: 'add', component: AddBookingComponent },

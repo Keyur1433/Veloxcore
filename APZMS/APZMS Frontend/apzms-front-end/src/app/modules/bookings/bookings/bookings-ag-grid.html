@@ -1,12 +1,7 @@
-<ag-grid-angular 
-    class="ag-theme-alpine"
-    [rowData]="bookings$ | async"
-    [columnDefs]="colDefs"
-    [pagination]="true"
-    [paginationPageSize]="5"
-    [paginationPageSizeSelector]="[5, 10, 20, 50]"
-    [suppressHorizontalScroll]="false"
-    [domLayout]="'autoHeight'"
+<h5 class="mb-4 ml-4 text-4xl font-bold dark:text-black">Bookings</h5>
+
+<ag-grid-angular class="ag-theme-alpine" [rowData]="bookings$ | async" [columnDefs]="colDefs" [pagination]="true"
+    [paginationPageSize]="5" [paginationPageSizeSelector]="[5, 10, 20, 50]" [domLayout]="'autoHeight'"
     [defaultColDef]="defaultColDef">
->
+    >
 </ag-grid-angular>

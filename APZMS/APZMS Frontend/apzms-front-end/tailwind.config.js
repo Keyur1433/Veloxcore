@@ -4,14 +4,19 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    "./src/**/*.{html,ts}",
+    "./src/**/*.{html,ts,js,jsx,tsx}",
+    "./index.html"
   ],
   theme: {
     extend: {
+      colors: {
+        testred: '#ff0000'
+      },
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans]
       },
     },
   },
+
   plugins: [],
 }

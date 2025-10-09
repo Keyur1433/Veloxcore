@@ -1,0 +1,27 @@
+<div class="chart-container">
+  <h2>Line Chart Component</h2>
+  <div>This is a simple line chart visualization</div>
+</div>
+
+<!-- Show Loading Spinner -->
+@if (coinsService.coinsState().loading) {
+<div>
+  Loading coins...
+</div>
+}
+
+<!-- Show Error Message -->
+@if (coinsService.coinsState().error) {
+<div>
+  Error: {{ coinsService.coinsState().error.message || coinsService.coinsState().error }}
+</div>
+}
+
+<!-- Show Coin Data -->
+<!-- @if(!coinsService.coinsState().loading && !coinsService.coinsState().error){
+<ul>
+  <li *ngFor="let coin of coinsService.coinsState().data">
+    {{ coin.name }} - ${{ coin.current_price }}
+  </li>
+</ul>
+} -->

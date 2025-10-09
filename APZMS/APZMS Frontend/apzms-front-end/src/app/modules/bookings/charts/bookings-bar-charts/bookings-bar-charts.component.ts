@@ -14,20 +14,14 @@ export class BookingsBarChartsComponent implements OnInit {
   highCharts = Highcharts;
   chartOptions$!: Observable<any>;
 
-  chartOptions: any = {
+  chartOptions: Highcharts.Options = {
     chart: { type: "column" },
-    title: { text: "Booking volume by activity" },
-    xAxis: { categories: [] },
-    yAxis: {
-      min: 0,
-      title: {
-        text: 'Number of Bookings'
+    title: { text: "Booking volume by activity and month" },
+    yAxis: [
+      {
+        title: { text: 'Activity Bookings' }
       }
-    },
-    series: [{
-      name: 'Bookings',
-      data: []
-    }]
+    ]
   };
 
   constructor(private bookingService: BookingService) { }
@@ -38,9 +32,6 @@ export class BookingsBarChartsComponent implements OnInit {
 
   private loadBookingData(): void {
     this.chartOptions$ = this.bookingService.getFilteredBookings({}).pipe(
-       tap(bookings => {
-        console.log(bookings);
-      }),
       map((bookings: BookingFilteredItemResponseDto[]) => this.processBookingData(bookings)),
       tap(bookings => {
         console.log(bookings);
@@ -51,24 +42,44 @@ export class BookingsBarChartsComponent implements OnInit {
   // EXPLANATION: Go to Angular Notes/Code Logic Explanation/Code Explanations/#APZMS_1
   private processBookingData(bookings: BookingFilteredItemResponseDto[]) {
     // debugger
-    const activityCounts = new Map<string, number>();
+    const activities = new Map<string, number>();
+
     bookings.forEach(booking => {
-      const count = activityCounts.get(booking.activityName) ?? 0;
-      activityCounts.set(booking.activityName, count + 1);
+      const count = activities.get(booking.activityName) ?? 0;
+      activities.set(booking.activityName, count + 1);
     });
 
-    const categories = Array.from(activityCounts.keys());
-    const data = Array.from(activityCounts.values());
+    const barData = Array.from(activities.values());
+    const activityNames = Array.from(activities.keys());
+
+    // Line Chart - Bookings per month
+    const monthWithBookingCount = new Map<number, number>()
+
+    bookings.forEach(booking => {
+      const count = monthWithBookingCount.get(new Date(booking.bookingDate).getMonth()) ?? 0
+      monthWithBookingCount.set(new Date(booking.bookingDate).getMonth(), count + 1)
+    });
+
+    // debugger
+    const monthWithBookingCountEntries = [...monthWithBookingCount]
+    monthWithBookingCountEntries.sort((a, b) => a[0] - b[0])
+    const monthWithBookingCountSorted = monthWithBookingCountEntries
+
+    const bookingsPerMonths = Array.from(monthWithBookingCountSorted.values())
 
     return {
-      chart: { type: 'column' },
-      title: { text: 'Booking volume by activity' },
-      xAxis: { categories },
-      yAxis: {
-        min: 0,
-        title: { text: 'Number of bookings' }
-      },
-      series: [{ name: 'Bookings', data }]
+      ...this.chartOptions,
+      xAxis: [
+        {
+          categories: activityNames,
+          title: { text: "Activities" }
+        }
+      ],
+
+      series: [
+        { name: 'Bookings by activity', data: barData, type: "column",  },
+        { name: 'Bookings per month', data: bookingsPerMonths, type: "line",  },
+      ]
     }
   }
 }

@@ -25,4 +25,9 @@ export const routes: Routes = [
         loadChildren: () => import('./modules/bookings/bookings.module').then(m => m.BookingsModule),
         canActivate: [authGuard]
     },
+    {
+        path: 'charts',
+        loadChildren: () => import('./modules/practice-high-chart/practice-high-chart.module').then(m => m.PracticeHighChartModule),
+        canActivate: [authGuard]
+    },
 ];
